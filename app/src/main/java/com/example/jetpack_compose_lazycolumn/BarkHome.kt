@@ -17,8 +17,9 @@ fun TampilanBerandaWisata() {
         items(
             items = itemWisata,
             itemContent = {
-                TampilanDaftarDataWisata(kolomDataWisata = it)
+                ViewDataWisata02(kolomDataWisata = it)
             }
         )
     }
 }
+
