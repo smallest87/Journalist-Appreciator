@@ -6,18 +6,18 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.unit.dp
-import com.example.jetpack_compose_lazycolumn.data.DataProvider
+import com.example.jetpack_compose_lazycolumn.data.PusatDataWisata
 
 @Composable
-fun BarkHomeContent() {
-    val puppies = remember {DataProvider.puppyList}
+fun TampilanBerandaWisata() {
+    val itemWisata = remember { PusatDataWisata.recordDataWisata}
     LazyColumn(
         contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp)
     ){
         items(
-            items = puppies,
+            items = itemWisata,
             itemContent = {
-                PuppyListItem(puppy = it)
+                TampilanDaftarDataWisata(kolomDataWisata = it)
             }
         )
     }

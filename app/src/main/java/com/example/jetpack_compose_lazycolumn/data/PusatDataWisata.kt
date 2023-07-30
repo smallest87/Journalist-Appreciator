@@ -2,9 +2,9 @@ package com.example.jetpack_compose_lazycolumn.data
 
 import com.example.jetpack_compose_lazycolumn.R
 
-object WisataDataProvider {
+object PusatDataWisata {
     val wisata =
-        WisataMalang(
+        KolomDataWisata(
             id = 1,
             judul = "Alun-alun Kota Malang",
             lokasi = "Kota Malang",
@@ -12,79 +12,79 @@ object WisataDataProvider {
             wisataImageId = R.drawable.p1
         )
 
-    val wisataList = listOf(
+    val recordDataWisata = listOf(
         wisata,
-        WisataMalang(
+        KolomDataWisata(
             id = 2,
             judul = "Kayutangan Heritage",
             lokasi = "Kota Malang",
             deskripsi = "Tempat yang nyaman untuk jalan-jalan.",
             wisataImageId = R.drawable.p2
         ),
-        WisataMalang(
+        KolomDataWisata(
             id = 3,
             judul = "Taman Kunang-kunang",
             lokasi = "Kota Malang",
             deskripsi = "Tempat yang nyaman untuk jalan-jalan.",
             wisataImageId = R.drawable.p3
         ),
-        WisataMalang(
+        KolomDataWisata(
             id = 4,
             judul = "Taman Slamet",
             lokasi = "Kota Malang",
             deskripsi = "Tempat yang nyaman untuk jalan-jalan.",
             wisataImageId = R.drawable.p4
         ),
-        WisataMalang(
+        KolomDataWisata(
             id = 5,
             judul = "Kampung Warna Warni",
             lokasi = "Kota Malang",
             deskripsi = "Tempat yang nyaman untuk jalan-jalan.",
             wisataImageId = R.drawable.p5
         ),
-        WisataMalang(
+        KolomDataWisata(
             id = 6,
             judul = "Kampung Biru",
             lokasi = "Kota Malang",
             deskripsi = "Tempat yang nyaman untuk jalan-jalan.",
             wisataImageId = R.drawable.p6
         ),
-        WisataMalang(
+        KolomDataWisata(
             id = 7,
             judul = "Kampung Arema",
             lokasi = "Kota Malang",
             deskripsi = "Tempat yang nyaman untuk jalan-jalan.",
             wisataImageId = R.drawable.p7
         ),
-        WisataMalang(
+        KolomDataWisata(
             id = 8,
             judul = "Taman Singha",
             lokasi = "Kota Malang",
             deskripsi = "Tempat yang nyaman untuk jalan-jalan..",
             wisataImageId = R.drawable.p8
         ),
-        WisataMalang(
+        KolomDataWisata(
             id = 9,
             judul = "Kampung Heritage",
             lokasi = "Kota Malang",
             deskripsi = "Tempat yang nyaman untuk jalan-jalan.",
             wisataImageId = R.drawable.p9
         ),
-        WisataMalang(
+        KolomDataWisata(
             id = 10,
             judul = "Kampung Bambu Mewek",
             lokasi = "Kota Malang",
             deskripsi = "Tempat yang nyaman untuk jalan-jalan.",
             wisataImageId = R.drawable.p10
         ),
-        WisataMalang(
+        KolomDataWisata(
             id = 11,
             judul = "Jalan Idjen Boulevard",
             lokasi = "Kota Malang",
             deskripsi = "Tempat yang nyaman untuk jalan-jalan.",
             wisataImageId = R.drawable.p11
         ),
-        WisataMalang(
+        KolomDataWisata(
             id = 12,
             judul = "Stella",
             lokasi = "Kota Malang",
