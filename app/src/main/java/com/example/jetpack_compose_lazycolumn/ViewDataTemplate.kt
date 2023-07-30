@@ -1,6 +1,7 @@
 package com.example.jetpack_compose_lazycolumn
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -15,15 +16,15 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import com.example.jetpack_compose_lazycolumn.data.KolomDataTemplate
 import com.example.jetpack_compose_lazycolumn.data.KolomDataWisata
 
 @Composable
-fun TampilanDaftarDataWisata(kolomDataWisata: KolomDataWisata){
+fun ViewDataTemplate(kolomDataTemplate: KolomDataTemplate){
     Card(
         modifier = Modifier
             .padding(horizontal = 8.dp, vertical = 8.dp)
@@ -33,16 +34,24 @@ fun TampilanDaftarDataWisata(kolomDataWisata: KolomDataWisata){
         shape = RoundedCornerShape(corner = CornerSize(8.dp))
     ) {
         Row {
-            WisataImage(kolomDataWisata = kolomDataWisata)
+            TemplateImage(kolomDataTemplate = kolomDataTemplate)
             Column(
                 modifier = Modifier
-                    .padding(16.dp)
                     .fillMaxWidth()
-                    .align(Alignment.CenterVertically)
+                    .align(Alignment.Top)
             ) {
                 Text(
-                    text = kolomDataWisata.judul,
-                    style = typography.titleLarge
+                    text = kolomDataTemplate.kolom02.uppercase(),
+                    Modifier
+                        .fillMaxWidth()
+                        .background(color = Color.LightGray)
+                        .padding(6.dp),
+                    style = typography.titleMedium,
+                    color = Color.White
+                )
+                Text(
+                    text = kolomDataTemplate.kolom03,
+                    style = typography.labelMedium
                 )
                 Text(
                     text = "VIEW DETAIL",
@@ -54,14 +63,12 @@ fun TampilanDaftarDataWisata(kolomDataWisata: KolomDataWisata){
 }
 
 @Composable
-private fun WisataImage(kolomDataWisata: KolomDataWisata) {
+private fun TemplateImage(kolomDataTemplate: KolomDataTemplate) {
     Image(
-        painter = painterResource(id = kolomDataWisata.wisataImageId),
+        painter = painterResource(id = kolomDataTemplate.templateImageId),
         contentDescription = null,
         contentScale = ContentScale.Crop,
         modifier = Modifier
-            .padding(8.dp)
-            .size(86.dp)
-            .clip(RoundedCornerShape(corner = CornerSize(8.dp)))
+            .size(140.dp)
     )
 }
