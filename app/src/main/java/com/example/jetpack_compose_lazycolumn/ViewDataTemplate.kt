@@ -21,7 +21,6 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.example.jetpack_compose_lazycolumn.data.KolomDataTemplate
-import com.example.jetpack_compose_lazycolumn.data.KolomDataWisata
 
 @Composable
 fun ViewDataTemplate(kolomDataTemplate: KolomDataTemplate){
@@ -41,7 +40,7 @@ fun ViewDataTemplate(kolomDataTemplate: KolomDataTemplate){
                     .align(Alignment.Top)
             ) {
                 Text(
-                    text = kolomDataTemplate.kolom02.uppercase(),
+                    text = kolomDataTemplate.kolom02String.uppercase(),
                     Modifier
                         .fillMaxWidth()
                         .background(color = Color.LightGray)
@@ -50,7 +49,7 @@ fun ViewDataTemplate(kolomDataTemplate: KolomDataTemplate){
                     color = Color.White
                 )
                 Text(
-                    text = kolomDataTemplate.kolom03,
+                    text = kolomDataTemplate.kolom03String,
                     style = typography.labelMedium
                 )
                 Text(
@@ -65,7 +64,7 @@ fun ViewDataTemplate(kolomDataTemplate: KolomDataTemplate){
 @Composable
 private fun TemplateImage(kolomDataTemplate: KolomDataTemplate) {
     Image(
-        painter = painterResource(id = kolomDataTemplate.templateImageId),
+        painter = painterResource(id = kolomDataTemplate.kolom05ImageInteger),
         contentDescription = null,
         contentScale = ContentScale.Crop,
         modifier = Modifier
