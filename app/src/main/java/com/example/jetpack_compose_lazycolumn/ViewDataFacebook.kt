@@ -79,21 +79,27 @@ fun ViewDataFacebook(kolomDataFacebook: KolomDataFacebook){
             FotoPosting(kolomDataFacebook = kolomDataFacebook)
             Row(
                 modifier = Modifier
-                    .padding(vertical = 8.dp)
+                    .padding(vertical = 16.dp)
                     .fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceAround
             ){
-                Text(
-                    text = "Like",
-                    fontWeight = FontWeight.Bold
+                Image(
+                    painter = painterResource(id = R.drawable.postbottomiconthumb),
+                    contentDescription = null,
+                    modifier = Modifier
+                        .size(24.dp)
                 )
-                Text(
-                    text = "Komentar",
-                    fontWeight = FontWeight.Bold
+                Image(
+                    painter = painterResource(id = R.drawable.postbottomiconcomment),
+                    contentDescription = null,
+                    modifier = Modifier
+                        .size(24.dp)
                 )
-                Text(
-                    text = "Bagikan",
-                    fontWeight = FontWeight.Bold
+                Image(
+                    painter = painterResource(id = R.drawable.postbottomiconshare),
+                    contentDescription = null,
+                    modifier = Modifier
+                        .size(24.dp)
                 )
             }
         }

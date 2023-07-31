@@ -22,6 +22,7 @@ import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.CornerSize
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -56,15 +57,14 @@ fun TampilanBerandaFacebook() {
                     onClick = { /*TODO*/ },
                     colors = ButtonDefaults.buttonColors(containerColor = Color.LightGray),
                     shape = RoundedCornerShape(corner = CornerSize(10.dp)),
+//                    modifier = Modifier
+//                        .fillMaxWidth()
                 ) {
                     Image(
                         painter = painterResource(id = R.drawable.house),
                         contentDescription = null,
                         modifier = Modifier
                             .size(24.dp)
-                    )
-                    Text(
-                        text = "Beranda"
                     )
                 }
 
