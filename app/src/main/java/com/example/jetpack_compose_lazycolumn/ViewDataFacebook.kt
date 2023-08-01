@@ -29,6 +29,7 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.jetpack_compose_lazycolumn.data.KolomDataFacebook
+import com.example.jetpack_compose_lazycolumn.ui.theme.fontKu
 
 @Composable
 fun ViewDataFacebook(kolomDataFacebook: KolomDataFacebook){
@@ -73,7 +74,8 @@ fun ViewDataFacebook(kolomDataFacebook: KolomDataFacebook){
                 modifier = Modifier
                     .padding(8.dp),
                 text = kolomDataFacebook.postinganString,
-                fontSize = 16.sp
+                fontSize = 16.sp,
+                fontFamily = fontKu
             )
 
             FotoPosting(kolomDataFacebook = kolomDataFacebook)

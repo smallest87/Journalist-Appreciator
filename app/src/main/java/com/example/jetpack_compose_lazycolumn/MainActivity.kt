@@ -36,7 +36,8 @@ class MainActivity : ComponentActivity() {
 fun MyApp() {
     Scaffold(
         content = {
-            TampilanBerandaFacebook()
+//            TampilanBerandaFacebook()
+             TampilanNotifFacebook()
         }
     )
 }

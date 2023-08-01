@@ -40,24 +40,23 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.sp
+import com.example.jetpack_compose_lazycolumn.data.PusatDataNotifFB
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
-fun TampilanBerandaFacebook() {
-    val itemWisata = remember { PusatDataFacebook.recordDataFacebook}
+fun TampilanNotifFacebook() {
+    val itemNotif = remember { PusatDataNotifFB.recordDataNotifFacebook}
     LazyColumn(
         modifier = Modifier
             .background(Color.LightGray)
     ){
         stickyHeader {
-//            TabScreen()
-//            TabDenganIconPNG()
-            Header01()
+            HeaderNotif()
         }
         items(
-            items = itemWisata,
+            items = itemNotif,
             itemContent = {
-                ViewDataFacebook(kolomDataFacebook = it)
+                ViewDataNotif(kolomNotifFB = it)
             }
         )
     }
@@ -65,7 +64,7 @@ fun TampilanBerandaFacebook() {
 
 
 @Composable
-fun TabScreen() {
+fun TabScreenNotif() {
     var tabIndex by remember { mutableStateOf(0) }
 
     val tabs = listOf("Beranda", "Pesan", "Market","Notif")
@@ -120,7 +119,7 @@ fun TabScreen() {
 // ----
 
 @Composable
-fun Header01(){
+fun HeaderNotif(){
     Column(){
         // Baris branding
         Row(
@@ -144,14 +143,14 @@ fun Header01(){
 
         // BARIS TAB
 
-      TabScreen()
-//        TabDenganIconPNG()
+      TabScreenNotif()
+//        TabDenganIconPNGNotif()
 
     }
 }
 
 @Composable
-fun TabDenganIconPNG() {
+fun TabDenganIconPNGNotif() {
     Row(
         modifier = Modifier
             .fillMaxWidth()
