@@ -1,6 +1,7 @@
 package com.example.jetpack_compose_lazycolumn.data
 
 import com.example.jetpack_compose_lazycolumn.R
+import com.example.jetpack_compose_lazycolumn.model.KolomNotifFB
 
 object PusatDataNotifFB {
     val recordValueNotifFacebook =

@@ -1,4 +1,4 @@
-package com.example.jetpack_compose_lazycolumn.data
+package com.example.jetpack_compose_lazycolumn.model
 
 data class KolomNotifFB(
     val id: Int,

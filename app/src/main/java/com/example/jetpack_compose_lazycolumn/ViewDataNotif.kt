@@ -16,7 +16,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.jetpack_compose_lazycolumn.data.KolomNotifFB
+import com.example.jetpack_compose_lazycolumn.model.KolomNotifFB
 
 @Composable
 fun ViewDataNotif(kolomNotifFB: KolomNotifFB){
