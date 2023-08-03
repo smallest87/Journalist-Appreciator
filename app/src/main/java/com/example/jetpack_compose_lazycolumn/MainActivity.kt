@@ -23,7 +23,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    MyApp()
+                    Aplikasi()
                 }
             }
         }
@@ -33,10 +33,9 @@ class MainActivity : ComponentActivity() {
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun MyApp() {
+fun Aplikasi() {
     Scaffold(
         content = {
-//            TampilanBerandaFacebook()
              TampilanNotifFacebook()
         }
     )

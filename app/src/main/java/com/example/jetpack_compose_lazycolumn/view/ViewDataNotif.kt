@@ -28,7 +28,6 @@ fun ViewDataNotif(kolomNotifFB: KolomNotifFB){
     Row (
         modifier = Modifier
             .fillMaxWidth()
-            .background(color = Color.White)
             .padding(4.dp),
         verticalAlignment = Alignment.Top,
         horizontalArrangement = Arrangement.SpaceBetween

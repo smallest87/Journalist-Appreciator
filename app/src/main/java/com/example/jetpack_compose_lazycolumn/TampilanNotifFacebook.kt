@@ -34,22 +34,21 @@ import com.example.jetpack_compose_lazycolumn.view.ViewDataNotif
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun TampilanNotifFacebook() {
-    val itemNotif = remember { PusatDataNotifFB.recordDataNotifFacebook}
-    LazyColumn(
-        modifier = Modifier
-            .background(Color.LightGray)
-    ){
-        stickyHeader {
-            HeaderNotif()
-        }
 
-        items(
-            items = itemNotif,
-            itemContent = {
-                ViewDataNotif(kolomNotifFB = it)
-            }
-        )
+    val itemNotif = remember { PusatDataNotifFB.recordDataNotifFacebook}
+    Column(){
+        HeaderPage()
+        LazyColumn(){
+
+            items(
+                items = itemNotif,
+                itemContent = {
+                    ViewDataNotif(kolomNotifFB = it)
+                }
+            )
+        }
     }
+
 }
 
 
@@ -108,50 +107,57 @@ fun MenuTabAtas() {
 // ----
 
 @Composable
-fun HeaderNotif(){
+fun HeaderPage(){
     Column(){
         Row(
             modifier = Modifier
                 .fillMaxWidth()
                 .background(color = Color(android.graphics.Color.parseColor("#bb0909")))
         ){
-            Text(
-                modifier = Modifier
-                    .padding(8.dp),
-                text = "JAVASATU.COM",
-                fontSize = 18.sp,
-                fontWeight = FontWeight.Bold,
-                color = Color.White
-            )
+            Branding("JAVASATU.COM")
         }
-        Divider(
-            thickness = Dp.Hairline,
-            color = Color.LightGray
-        )
 
         MenuTabAtas()
+        JudulHalaman("Notifikasi")
 
-        Row(
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.SpaceBetween,
-            modifier = Modifier
-                .background(Color.White)
-                .fillMaxWidth()
-        ){
-            Text(
-                text="Notifikasi",
-                fontSize = 24.sp,
-                fontWeight = FontWeight.Bold,
-                modifier = Modifier
-                    .padding(vertical = 16.dp, horizontal = 8.dp)
-            )
-            Image(
-                painter = painterResource(id = R.drawable.lens),
-                contentDescription = null,
-                modifier = Modifier
-                    .size(36.dp)
-                    .padding(end = 8.dp)
-            )
-        }
+        Divider(thickness = Dp.Hairline,color = Color.LightGray)
     }
+}
+
+@Composable
+fun JudulHalaman(notif: String) {
+    Row(
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.SpaceBetween,
+        modifier = Modifier
+            .background(Color.White)
+            .fillMaxWidth()
+    ){
+        Text(
+            text= notif,
+            fontSize = 24.sp,
+            fontWeight = FontWeight.Bold,
+            modifier = Modifier
+                .padding(vertical = 16.dp, horizontal = 8.dp)
+        )
+        Image(
+            painter = painterResource(id = R.drawable.lens),
+            contentDescription = null,
+            modifier = Modifier
+                .size(36.dp)
+                .padding(end = 8.dp)
+        )
+    }
+}
+
+@Composable
+fun Branding(branding: String) {
+    Text(
+        modifier = Modifier
+            .padding(8.dp),
+        text = branding,
+        fontSize = 18.sp,
+        fontWeight = FontWeight.Bold,
+        color = Color.White
+    )
 }
