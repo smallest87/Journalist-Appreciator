@@ -3,6 +3,7 @@ package com.example.jetpack_compose_lazycolumn
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.lazy.LazyColumn
@@ -22,6 +23,7 @@ import androidx.compose.material3.TabRow
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.Dp
@@ -90,7 +92,6 @@ fun TabScreenNotif() {
                                 modifier = Modifier
                                     .size(24.dp)
                             )
-//                            2 -> Icon(imageVector = Icons.Default.Settings, contentDescription = null)
                         }
                     }
                 )
@@ -130,13 +131,29 @@ fun HeaderNotif(){
 
         TabScreenNotif()
 
-        Text(
-            text="Notifikasi",
-            fontSize = 24.sp,
-            fontWeight = FontWeight.Bold,
+        Row(
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.SpaceBetween,
             modifier = Modifier
-                .padding(vertical = 16.dp, horizontal = 8.dp)
-        )
+                .background(Color.White)
+                .fillMaxWidth()
+        ){
+            Text(
+                text="Notifikasi",
+                fontSize = 24.sp,
+                fontWeight = FontWeight.Bold,
+                modifier = Modifier
+                    .padding(vertical = 16.dp, horizontal = 8.dp)
+            )
+            Image(
+                painter = painterResource(id = R.drawable.lens),
+                contentDescription = null,
+                modifier = Modifier
+                    .size(36.dp)
+                    .padding(end = 8.dp)
+            )
+        }
+
 
     }
 }
