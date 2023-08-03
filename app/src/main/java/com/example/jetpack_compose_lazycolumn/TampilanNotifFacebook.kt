@@ -48,6 +48,7 @@ fun TampilanNotifFacebook() {
         stickyHeader {
             HeaderNotif()
         }
+
         items(
             items = itemNotif,
             itemContent = {
@@ -137,9 +138,13 @@ fun HeaderNotif(){
         )
 
         // BARIS TAB
-
-      TabScreenNotif()
+        TabScreenNotif()
 //        TabDenganIconPNGNotif()
+        Text(
+            text="Notifikasi",
+            fontSize = 24.sp,
+            fontWeight = FontWeight.Bold
+        )
 
     }
 }
