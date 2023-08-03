@@ -1,4 +1,4 @@
-package com.example.jetpack_compose_lazycolumn
+package com.example.jetpack_compose_lazycolumn.view
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
