@@ -42,7 +42,6 @@ fun HalamanNotifikasi() {
         HeaderPage()
 
         LazyColumn(){
-
             items(
                 items = itemNotif,
                 itemContent = {
