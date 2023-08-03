@@ -7,8 +7,8 @@ object PusatDataNotifFB {
     val recordValueNotifFacebook =
         KolomNotifFB(
             id = 1,
-            namaSubyekString = "Meidika Wardana",
-            jenisAksiString = "menulis",
+            notifDari = "Meidika Wardana",
+            aktivitas = "menulis",
             namaObyekString = "postingan baru",
             waktuNotifString = "1h",
             fotoNotifImage = R.drawable.p1
@@ -18,91 +18,91 @@ object PusatDataNotifFB {
         recordValueNotifFacebook,
         KolomNotifFB(
             id = 2,
-            namaSubyekString = "Mario",
-            jenisAksiString = "menulis",
+            notifDari = "Mario",
+            aktivitas = "menulis",
             namaObyekString = "postingan baru",
             waktuNotifString = "1h",
-            fotoNotifImage = R.drawable.p1
+            fotoNotifImage = R.drawable.p2
         ),
         KolomNotifFB(
             id = 3,
-            namaSubyekString = "Teguh",
-            jenisAksiString = "menulis",
+            notifDari = "Teguh",
+            aktivitas = "menulis",
             namaObyekString = "postingan baru",
             waktuNotifString = "1h",
-            fotoNotifImage = R.drawable.p1
+            fotoNotifImage = R.drawable.p3
         ),
         KolomNotifFB(
             id = 4,
-            namaSubyekString = "Mawardi",
-            jenisAksiString = "menulis",
+            notifDari = "Mawardi",
+            aktivitas = "menulis",
             namaObyekString = "postingan baru",
             waktuNotifString = "1h",
-            fotoNotifImage = R.drawable.p1
+            fotoNotifImage = R.drawable.p4
         ),
         KolomNotifFB(
             id = 5,
-            namaSubyekString = "Tasya",
-            jenisAksiString = "menulis",
+            notifDari = "Tasya",
+            aktivitas = "menulis",
             namaObyekString = "postingan baru",
             waktuNotifString = "1h",
-            fotoNotifImage = R.drawable.p1
+            fotoNotifImage = R.drawable.p5
         ),
         KolomNotifFB(
             id = 6,
-            namaSubyekString = "Rois",
-            jenisAksiString = "menulis",
+            notifDari = "Rois",
+            aktivitas = "menulis",
             namaObyekString = "postingan baru",
             waktuNotifString = "1h",
-            fotoNotifImage = R.drawable.p1
+            fotoNotifImage = R.drawable.p6
         ),
         KolomNotifFB(
             id = 7,
-            namaSubyekString = "Ghana",
-            jenisAksiString = "menulis",
+            notifDari = "Ghana",
+            aktivitas = "menulis",
             namaObyekString = "postingan baru",
             waktuNotifString = "1h",
-            fotoNotifImage = R.drawable.p1
+            fotoNotifImage = R.drawable.p7
         ),
         KolomNotifFB(
             id = 8,
-            namaSubyekString = "Judika",
-            jenisAksiString = "menulis",
+            notifDari = "Judika",
+            aktivitas = "menulis",
             namaObyekString = "postingan baru",
             waktuNotifString = "1h",
-            fotoNotifImage = R.drawable.p1
+            fotoNotifImage = R.drawable.p8
         ),
         KolomNotifFB(
             id = 9,
-            namaSubyekString = "Meidika Wardana",
-            jenisAksiString = "menulis",
+            notifDari = "Meidika Wardana",
+            aktivitas = "menulis",
             namaObyekString = "postingan baru",
             waktuNotifString = "1h",
-            fotoNotifImage = R.drawable.p1
+            fotoNotifImage = R.drawable.p9
         ),
         KolomNotifFB(
             id = 10,
-            namaSubyekString = "Meidika Wardana",
-            jenisAksiString = "menulis",
+            notifDari = "Meidika Wardana",
+            aktivitas = "menulis",
             namaObyekString = "postingan baru",
             waktuNotifString = "1h",
-            fotoNotifImage = R.drawable.p1
+            fotoNotifImage = R.drawable.p10
         ),
         KolomNotifFB(
             id = 11,
-            namaSubyekString = "Meidika Wardana",
-            jenisAksiString = "menulis",
+            notifDari = "Meidika Wardana",
+            aktivitas = "menulis",
             namaObyekString = "postingan baru",
             waktuNotifString = "1h",
-            fotoNotifImage = R.drawable.p1
+            fotoNotifImage = R.drawable.p11
         ),
         KolomNotifFB(
             id = 12,
-            namaSubyekString = "Meidika Wardana",
-            jenisAksiString = "menulis",
+            notifDari = "Meidika Wardana",
+            aktivitas = "menulis",
             namaObyekString = "postingan baru",
             waktuNotifString = "1h",
-            fotoNotifImage = R.drawable.p1
+            fotoNotifImage = R.drawable.p12
         )
     )
 }
