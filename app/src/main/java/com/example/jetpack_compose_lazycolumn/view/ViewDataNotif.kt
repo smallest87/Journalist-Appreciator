@@ -2,6 +2,8 @@ package com.example.jetpack_compose_lazycolumn.view
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -22,26 +24,37 @@ import com.example.jetpack_compose_lazycolumn.model.KolomNotifFB
 fun ViewDataNotif(kolomNotifFB: KolomNotifFB){
     Row (
         modifier = Modifier
+            .fillMaxWidth()
             .background(color = Color.White)
-            .padding(vertical = 4.dp),
-        verticalAlignment = Alignment.CenterVertically
-    ){
-        FotoNotif(kolomNotifFB = kolomNotifFB)
+            .padding(vertical = 8.dp),
+        verticalAlignment = Alignment.Top,
+        horizontalArrangement = Arrangement.SpaceBetween
+    ) {
+        Row(){
+            FotoNotif(kolomNotifFB = kolomNotifFB)
 
-        Text(
-            text = kolomNotifFB.namaSubyekString + " " + kolomNotifFB.jenisAksiString
-                + " " + kolomNotifFB.namaObyekString,
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(4.dp),
-            fontSize = 14.sp,
-            )
-        Text(
-            text = kolomNotifFB.waktuNotifString,
-            fontSize = 12.sp,
-            color = Color.Gray
+            Column() {
+                Text(
+                    text = kolomNotifFB.namaSubyekString + " " + kolomNotifFB.jenisAksiString
+                            + " " + kolomNotifFB.namaObyekString,
+                    fontSize = 18.sp,
+                    softWrap = true
+                )
+                Text(
+                    text = kolomNotifFB.waktuNotifString,
+                    fontSize = 14.sp,
+                    color = Color.Gray
+                )
+            }
+        }
+
+            Text(
+                text = "...",
+                modifier = Modifier
+                    .padding(end = 8.dp)
             )
     }
+
     Divider(thickness = 1.dp, color = Color.LightGray)
 }
 @Composable
@@ -51,8 +64,9 @@ private fun FotoNotif(kolomNotifFB: KolomNotifFB) {
         contentDescription = null,
         contentScale = ContentScale.Crop,
         modifier = Modifier
-            .size(40.dp)
+            .size(75.dp)
             .padding(4.dp)
+
     )
 }
 

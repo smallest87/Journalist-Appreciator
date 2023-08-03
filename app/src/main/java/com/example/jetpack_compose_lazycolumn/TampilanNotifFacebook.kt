@@ -54,7 +54,7 @@ fun TampilanNotifFacebook() {
 
 
 @Composable
-fun TabScreenNotif() {
+fun MenuTabAtas() {
     var tabIndex by remember { mutableStateOf(0) }
 
     val tabs = listOf("Beranda", "Pesan", "Market","Notif")
@@ -129,7 +129,7 @@ fun HeaderNotif(){
             color = Color.LightGray
         )
 
-        TabScreenNotif()
+        MenuTabAtas()
 
         Row(
             verticalAlignment = Alignment.CenterVertically,
@@ -153,7 +153,5 @@ fun HeaderNotif(){
                     .padding(end = 8.dp)
             )
         }
-
-
     }
 }
