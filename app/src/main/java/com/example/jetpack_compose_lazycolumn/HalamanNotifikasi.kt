@@ -33,11 +33,14 @@ import com.example.jetpack_compose_lazycolumn.view.ViewDataNotif
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
-fun TampilanNotifFacebook() {
+fun HalamanNotifikasi() {
 
     val itemNotif = remember { PusatDataNotifFB.recordDataNotifFacebook}
+
     Column(){
+
         HeaderPage()
+
         LazyColumn(){
 
             items(
