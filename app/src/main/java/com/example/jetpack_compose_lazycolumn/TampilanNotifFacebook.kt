@@ -3,7 +3,6 @@ package com.example.jetpack_compose_lazycolumn
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.lazy.LazyColumn
@@ -17,19 +16,12 @@ import androidx.compose.material3.Text
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.shape.CornerSize
-import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Divider
 import androidx.compose.material3.Tab
 import androidx.compose.material3.TabRow
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
-import androidx.compose.ui.Alignment
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.Dp
@@ -117,7 +109,6 @@ fun TabScreenNotif() {
 @Composable
 fun HeaderNotif(){
     Column(){
-        // Baris branding
         Row(
             modifier = Modifier
                 .fillMaxWidth()
@@ -137,72 +128,15 @@ fun HeaderNotif(){
             color = Color.LightGray
         )
 
-        // BARIS TAB
         TabScreenNotif()
-//        TabDenganIconPNGNotif()
+
         Text(
             text="Notifikasi",
             fontSize = 24.sp,
-            fontWeight = FontWeight.Bold
+            fontWeight = FontWeight.Bold,
+            modifier = Modifier
+                .padding(vertical = 16.dp, horizontal = 8.dp)
         )
 
     }
-}
-
-@Composable
-fun TabDenganIconPNGNotif() {
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .background(Color.White),
-        horizontalArrangement = Arrangement.SpaceAround,
-        verticalAlignment = Alignment.CenterVertically
-    ){
-
-    Button(
-        onClick = { /*TODO*/ },
-        colors = ButtonDefaults.buttonColors(containerColor = Color.LightGray),
-        shape = RoundedCornerShape(corner = CornerSize(10.dp)),
-//                    modifier = Modifier
-//                        .fillMaxWidth()
-    ) {
-    Image(
-        painter = painterResource(id = R.drawable.house),
-        contentDescription = null,
-        modifier = Modifier
-            .size(24.dp)
-        )
-    }
-
-    Image(
-        painter = painterResource(id = R.drawable.like),
-        contentDescription = null,
-        modifier = Modifier
-            .size(24.dp)
-    )
-    Image(
-        painter = painterResource(id = R.drawable.messenger),
-        contentDescription = null,
-        modifier = Modifier
-            .size(24.dp)
-    )
-    Image(
-        painter = painterResource(id = R.drawable.settings),
-        contentDescription = null,
-        modifier = Modifier
-            .size(24.dp)
-    )
-    Image(
-        painter = painterResource(id = R.drawable.p1),
-        contentDescription = null,
-        modifier = Modifier
-            .size(24.dp)
-            .clip(CircleShape)
-    )
-
-    }
-    Divider(
-        thickness = Dp.Hairline,
-        color = Color.LightGray
-    )
 }
