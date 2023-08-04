@@ -17,7 +17,10 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.jetpack_compose_lazycolumn.model.KolomNotifFB
@@ -28,38 +31,46 @@ fun ViewDataNotif(kolomNotifFB: KolomNotifFB){
         modifier = Modifier
             .fillMaxWidth()
             .padding(4.dp),
-        verticalAlignment = Alignment.Top,
         horizontalArrangement = Arrangement.SpaceBetween
     ) {
-        Row(){
+        Row(
+            verticalAlignment = Alignment.CenterVertically,
+        ){
             FotoNotif(kolomNotifFB = kolomNotifFB)
+            Text(
 
-            Column(
                 modifier = Modifier
-                    .padding(8.dp)
-            ) {
-                Text(
-                    text = kolomNotifFB.notifDari
-                            + " "
-                            + kolomNotifFB.aktivitas
-                            + " "
-                            + kolomNotifFB.namaObyekString,
-                    fontSize = 16.sp,
-                    fontWeight = FontWeight.Bold
-                )
-                Text(
-                    text = kolomNotifFB.waktuNotifString,
-                    fontSize = 14.sp,
-                    color = Color.Gray
-                )
-            }
+                    .padding(start = 4.dp),
+                text = buildAnnotatedString {
+                    withStyle(style = SpanStyle(fontWeight = FontWeight.Bold)) {
+                        append(kolomNotifFB.notifDari)
+                    }
+
+                    append(" ")
+                    append(kolomNotifFB.aktivitas)
+                    append(" ")
+
+                    withStyle(
+                        style = SpanStyle(
+                            fontWeight = FontWeight.Bold
+                        )){
+                        append(kolomNotifFB.namaObyekString)
+                    }
+
+                    append(".")
+                    append(" ")
+                    withStyle(
+                        style = SpanStyle(
+                            color = Color.Gray,
+                            fontSize = 12.sp
+                        )) {
+                        append(kolomNotifFB.waktuNotifString)
+                    }
+                }
+            )
         }
 
-            Text(
-                text = "...",
-                modifier = Modifier
-                    .padding(end = 8.dp)
-            )
+
     }
 
     Divider(thickness = 1.dp, color = Color.LightGray)
@@ -71,7 +82,7 @@ private fun FotoNotif(kolomNotifFB: KolomNotifFB) {
         contentDescription = null,
         contentScale = ContentScale.Crop,
         modifier = Modifier
-            .size(75.dp)
+            .size(60.dp)
             .padding(4.dp)
             .clip(CircleShape)
 

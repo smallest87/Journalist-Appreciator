@@ -8,8 +8,8 @@ object PusatDataNotifFB {
         KolomNotifFB(
             id = 1,
             notifDari = "Meidika Wardana",
-            aktivitas = "menulis",
-            namaObyekString = "postingan baru",
+            aktivitas = "memposting",
+            namaObyekString = "tulisan",
             waktuNotifString = "1h",
             fotoNotifImage = R.drawable.p1
         )
@@ -19,23 +19,23 @@ object PusatDataNotifFB {
         KolomNotifFB(
             id = 2,
             notifDari = "Mario",
-            aktivitas = "menulis",
-            namaObyekString = "postingan baru",
-            waktuNotifString = "1h",
+            aktivitas = "menyukai postingan",
+            namaObyekString = "Wahidah",
+            waktuNotifString = "2h",
             fotoNotifImage = R.drawable.p2
         ),
         KolomNotifFB(
             id = 3,
             notifDari = "Teguh",
-            aktivitas = "menulis",
+            aktivitas = "memposting",
             namaObyekString = "postingan baru",
-            waktuNotifString = "1h",
+            waktuNotifString = "4h",
             fotoNotifImage = R.drawable.p3
         ),
         KolomNotifFB(
             id = 4,
             notifDari = "Mawardi",
-            aktivitas = "menulis",
+            aktivitas = "memposting",
             namaObyekString = "postingan baru",
             waktuNotifString = "1h",
             fotoNotifImage = R.drawable.p4
@@ -43,7 +43,7 @@ object PusatDataNotifFB {
         KolomNotifFB(
             id = 5,
             notifDari = "Tasya",
-            aktivitas = "menulis",
+            aktivitas = "memposting",
             namaObyekString = "postingan baru",
             waktuNotifString = "1h",
             fotoNotifImage = R.drawable.p5
@@ -51,7 +51,7 @@ object PusatDataNotifFB {
         KolomNotifFB(
             id = 6,
             notifDari = "Rois",
-            aktivitas = "menulis",
+            aktivitas = "memposting",
             namaObyekString = "postingan baru",
             waktuNotifString = "1h",
             fotoNotifImage = R.drawable.p6
@@ -59,7 +59,7 @@ object PusatDataNotifFB {
         KolomNotifFB(
             id = 7,
             notifDari = "Ghana",
-            aktivitas = "menulis",
+            aktivitas = "memposting",
             namaObyekString = "postingan baru",
             waktuNotifString = "1h",
             fotoNotifImage = R.drawable.p7
@@ -67,7 +67,7 @@ object PusatDataNotifFB {
         KolomNotifFB(
             id = 8,
             notifDari = "Judika",
-            aktivitas = "menulis",
+            aktivitas = "memposting",
             namaObyekString = "postingan baru",
             waktuNotifString = "1h",
             fotoNotifImage = R.drawable.p8
