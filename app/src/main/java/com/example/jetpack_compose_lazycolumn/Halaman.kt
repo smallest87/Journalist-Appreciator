@@ -1,6 +1,5 @@
 package com.example.jetpack_compose_lazycolumn
 
-import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -28,31 +27,9 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.sp
+import com.example.jetpack_compose_lazycolumn.data.PusatDataFacebook
 import com.example.jetpack_compose_lazycolumn.data.PusatDataNotifFB
 import com.example.jetpack_compose_lazycolumn.view.ViewDataNotif
-
-@OptIn(ExperimentalFoundationApi::class)
-@Composable
-fun HalamanNotifikasi() {
-
-    val itemNotif = remember { PusatDataNotifFB.recordDataNotifFacebook}
-
-    Column(){
-
-        HeaderPage()
-
-        LazyColumn(){
-            items(
-                items = itemNotif,
-                itemContent = {
-                    ViewDataNotif(kolomNotifFB = it)
-                }
-            )
-        }
-    }
-
-}
-
 
 @Composable
 fun MenuTabAtas() {
@@ -98,15 +75,100 @@ fun MenuTabAtas() {
                 )
             }
         }
-//        when (tabIndex) {
-//            0 -> HomeScreen()
-//            1 -> AboutScreen()
-//            2 -> SettingsScreen()
-//        }
+        when (tabIndex) {
+//            0 -> HalamanNotifikasi()
+            1 -> Text(text = "Halaman 1")
+            2 -> Text(text = "Halaman 2")
+            3 -> Text(text = "Halaman 3")
+////            4 -> HalamanBeranda()
+//
+        }
     }
 }
+@Composable
+fun HalamanBeranda() {
 
-// ----
+    val itemFacebook = remember { PusatDataFacebook.recordDataFacebook}
+
+    Column(){
+
+        HeaderPage()
+
+        LazyColumn(){
+            items(
+                items = itemFacebook,
+                itemContent = {
+                    ViewDataFacebook(kolomDataFacebook = it)
+                }
+            )
+        }
+    }
+
+}
+
+@Composable
+fun HalamanPesan() {
+
+    val itemNotif = remember { PusatDataNotifFB.recordDataNotifFacebook}
+
+    Column(){
+
+        HeaderPage()
+
+        LazyColumn(){
+            items(
+                items = itemNotif,
+                itemContent = {
+                    ViewDataNotif(kolomNotifFB = it)
+                }
+            )
+        }
+    }
+
+}
+
+@Composable
+fun HalamanMarket() {
+
+    val itemNotif = remember { PusatDataNotifFB.recordDataNotifFacebook}
+
+    Column(){
+
+        HeaderPage()
+
+        LazyColumn(){
+            items(
+                items = itemNotif,
+                itemContent = {
+                    ViewDataNotif(kolomNotifFB = it)
+                }
+            )
+        }
+    }
+
+}
+
+
+@Composable
+fun HalamanNotifikasi() {
+
+    val itemNotif = remember { PusatDataNotifFB.recordDataNotifFacebook}
+
+    Column(){
+
+        HeaderPage()
+
+        LazyColumn(){
+            items(
+                items = itemNotif,
+                itemContent = {
+                    ViewDataNotif(kolomNotifFB = it)
+                }
+            )
+        }
+    }
+
+}
 
 @Composable
 fun HeaderPage(){
