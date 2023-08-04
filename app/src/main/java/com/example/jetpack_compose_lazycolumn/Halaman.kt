@@ -76,12 +76,10 @@ fun MenuTabAtas() {
             }
         }
         when (tabIndex) {
-//            0 -> HalamanNotifikasi()
+            0 -> HalamanBeranda()
             1 -> Text(text = "Halaman 1")
             2 -> Text(text = "Halaman 2")
-            3 -> Text(text = "Halaman 3")
-////            4 -> HalamanBeranda()
-//
+            3 -> HalamanNotifikasi()
         }
     }
 }
@@ -92,7 +90,7 @@ fun HalamanBeranda() {
 
     Column(){
 
-        HeaderPage()
+//        HeaderPage()
 
         LazyColumn(){
             items(
@@ -156,7 +154,7 @@ fun HalamanNotifikasi() {
 
     Column(){
 
-        HeaderPage()
+//        HeaderPage()
 
         LazyColumn(){
             items(
