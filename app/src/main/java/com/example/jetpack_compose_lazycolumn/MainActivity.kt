@@ -4,25 +4,20 @@ import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import com.example.jetpack_compose_lazycolumn.ui.theme.Jetpack_Compose_LazyColumnTheme
+import com.example.jetpack_compose_lazycolumn.ui.theme.LazyColumnTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            Jetpack_Compose_LazyColumnTheme {
+            LazyColumnTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
@@ -41,16 +36,7 @@ class MainActivity : ComponentActivity() {
 fun AplikasiHalamanNotifikasi() {
     Scaffold(
         content = {
-            Column(){
-                Row(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .background(color = Color(android.graphics.Color.parseColor("#bb0909")))
-                ){
-                    Branding("AJD - Alat Jurnalis Digital™")
-                }
-                MenuTabAtas()
-            }
+            HeaderAtas()
         }
     )
 }

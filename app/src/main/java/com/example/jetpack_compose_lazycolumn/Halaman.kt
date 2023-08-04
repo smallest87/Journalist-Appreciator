@@ -32,6 +32,20 @@ import com.example.jetpack_compose_lazycolumn.data.PusatDataNotifFB
 import com.example.jetpack_compose_lazycolumn.view.ViewDataNotif
 
 @Composable
+fun HeaderAtas(){
+    Column(){
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .background(color = Color(android.graphics.Color.parseColor("#bb0909")))
+        ){
+            Branding("AJD - Alat Jurnalis Digital™")
+        }
+        MenuTabAtas()
+    }
+}
+
+@Composable
 fun MenuTabAtas() {
     var tabIndex by remember { mutableStateOf(0) }
 
