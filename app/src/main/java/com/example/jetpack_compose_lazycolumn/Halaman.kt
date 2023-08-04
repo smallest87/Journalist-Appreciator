@@ -171,13 +171,6 @@ fun HalamanNotifikasi() {
 @Composable
 fun HeaderPage(){
     Column(){
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .background(color = Color(android.graphics.Color.parseColor("#bb0909")))
-        ){
-            Branding("JAVASATU.COM")
-        }
 
         MenuTabAtas()
         JudulHalaman("Notifikasi")
