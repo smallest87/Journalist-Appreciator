@@ -36,7 +36,7 @@ class MainActivity : ComponentActivity() {
 fun AplikasiHalamanNotifikasi() {
     Scaffold(
         content = {
-            HeaderAtas()
+            TabDanHalaman()
         }
     )
 }

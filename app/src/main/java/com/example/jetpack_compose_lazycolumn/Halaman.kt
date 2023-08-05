@@ -32,14 +32,16 @@ import com.example.jetpack_compose_lazycolumn.data.PusatDataNotifFB
 import com.example.jetpack_compose_lazycolumn.view.ViewDataNotif
 
 @Composable
-fun HeaderAtas(){
+fun TabDanHalaman(){
     Column(){
+
+        // Baris Branding
         Row(
             modifier = Modifier
                 .fillMaxWidth()
                 .background(color = Color(android.graphics.Color.parseColor("#bb0909")))
         ){
-            Branding("AJD - Alat Jurnalis Digital™")
+            Branding("AJD - Alat Jurnalis Digital™",16)
         }
         MenuTabAtas()
     }
@@ -91,7 +93,7 @@ fun MenuTabAtas() {
         }
         when (tabIndex) {
             0 -> HalamanBeranda()
-            1 -> Text(text = "Halaman 1")
+            1 -> HalamanPesan()
             2 -> Text(text = "Halaman 2")
             3 -> HalamanNotifikasi()
         }
@@ -125,7 +127,7 @@ fun HalamanPesan() {
 
     Column(){
 
-        HeaderPage()
+//        HeaderPage()
 
         LazyColumn(){
             items(
@@ -220,13 +222,14 @@ fun JudulHalaman(notif: String) {
 }
 
 @Composable
-fun Branding(branding: String) {
+fun Branding(namaMerek: String, ukuranFont: Int) {
     Text(
-        modifier = Modifier
-            .padding(8.dp),
-        text = branding,
-        fontSize = 18.sp,
+        text = namaMerek,
+        fontSize = ukuranFont.sp,
         fontWeight = FontWeight.Bold,
-        color = Color.White
+        color = Color.White,
+
+        modifier = Modifier
+            .padding(8.dp)
     )
 }

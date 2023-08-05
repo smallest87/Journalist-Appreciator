@@ -8,3 +8,10 @@ data class KolomNotifFB(
     val waktuNotifString: String,
     val fotoNotifImage: Int = 0
 )
+
+data class KolomProfil(
+    val id: Int,
+    val namaProfil: String,
+    val bioData: String,
+    val fotoProfil: Int = 0
+)
