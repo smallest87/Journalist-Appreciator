@@ -7,36 +7,36 @@ object PusatDataProfil {
     val profil =
         KolomProfil(
             id = 1,
-            namaProfil = "Wibowo Susilo",
-            bioData = "Kota Malang",
-            fotoProfil = R.drawable.fotoprofil02
+            namaProfil = "Abdus Salam",
+            bioData = "Hello",
+            fotoProfil = R.drawable.fotoprofilabdussalam
         )
 
     val kumpulanDataProfil = listOf(
         profil,
         KolomProfil(
             id = 2,
-            namaProfil = "Ruma Kertas",
-            bioData = "Kota Malang",
-            fotoProfil = R.drawable.fotoprofil01
+            namaProfil = "Rahmawati",
+            bioData = "Hai",
+            fotoProfil = R.drawable.fotoprofilrahmawati
         ),
         KolomProfil(
             id = 3,
-            namaProfil = "Debby Setiawan",
-            bioData = "Kota Malang",
-            fotoProfil = R.drawable.fotoprofil03
+            namaProfil = "Gunawan Sasmita",
+            bioData = "Apa kabarmu?",
+            fotoProfil = R.drawable.fotoprofilgunawansasmita
         ),
         KolomProfil(
             id = 4,
-            namaProfil = "Jopuju Prod",
-            bioData = "Kota Malang",
-            fotoProfil = R.drawable.fotoprofil04
+            namaProfil = "Budi Harianto",
+            bioData = "Dah tidur",
+            fotoProfil = R.drawable.fotoprofilbudiharianto
         ),
         KolomProfil(
             id = 5,
-            namaProfil = "Ipung Sweetenan",
-            bioData = "Kota Malang",
-            fotoProfil = R.drawable.fotoprofil05
+            namaProfil = "Susilowati Wahid",
+            bioData = "Jon...",
+            fotoProfil = R.drawable.fotoprofilsusilowatiwahid
         )
     )
 }

@@ -20,5 +20,7 @@ data class ModelWhatsapp(
     val id: Int,
     val namaPengguna: String,
     val cuplikanChat: String,
+    val pinned: Boolean,
+    val jumlahNotif: Int,
     val fotoProfil: Int = 0
 )
