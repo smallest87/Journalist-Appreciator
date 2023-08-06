@@ -27,12 +27,12 @@ data class TemplateFieldWhatsappUserProfile(
     val statusBisukan: Boolean,
 )
 
-data class TemplateFieldProjectList(
+data class TemplateFieldJob(
     val id: Int,
-    val namaProyek: String,
-    val ringkasanProyek: String,
+    val namaJob: String,
+    val deskripsiJob: String,
     val namaPekerja: String,
-    val tanggalAmbilJob: String
+    val waktuJob: String
 )
 
 data class TemplateFieldJenisAksi(
