@@ -9,21 +9,14 @@ data class KolomNotifFB(
     val fotoNotifImage: Int = 0
 )
 
-data class KolomProfil(
-    val id: Int,
-    val namaProfil: String,
-    val bioData: String,
-    val fotoProfil: Int = 0
-)
-
 data class TemplateFieldWhatsappChat(
     val id: Int,
+    val fotoProfil: Int = 0,
     val namaPengguna: String,
     val cuplikanChat: String,
     val pinned: Boolean,
     val bisukan: Boolean,
-    val jumlahNotif: Int,
-    val fotoProfil: Int = 0
+    val jumlahNotif: Int
 )
 
 data class TemplateFieldWhatsappUserProfile(
