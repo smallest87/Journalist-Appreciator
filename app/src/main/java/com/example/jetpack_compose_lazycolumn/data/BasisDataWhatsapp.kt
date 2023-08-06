@@ -53,8 +53,8 @@ object BasisDataWhatsapp {
     )
 
     val listAksi = listOf(
-        TemplateFieldJenisAksi(id = 1,"Ambil foto liputan","Foto","Tuntas","Abdus Salam"),
-        TemplateFieldJenisAksi(id = 2,"Ambil video liputan","Video","Proses", "Rahmawati"),
+        TemplateFieldJenisAksi(id = 1,"Ambil foto ilustrasi","Foto","Cukup","Abdus Salam"),
+        TemplateFieldJenisAksi(id = 2,"Ambil video ilustrasi","Video","Proses", "Rahmawati"),
         TemplateFieldJenisAksi(id = 3,"Wawancara narasumber","Audio","Proses","Rahmawati"),
         TemplateFieldJenisAksi(id = 4,"Transkrip wawancara","Teks","Belum","Sulaiman"),
         TemplateFieldJenisAksi(id = 5,"Tambah referensi","Link","Belum","Sulaiman")
