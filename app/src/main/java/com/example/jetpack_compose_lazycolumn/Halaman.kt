@@ -31,9 +31,7 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.sp
 import com.example.jetpack_compose_lazycolumn.data.PusatDataFacebook
 import com.example.jetpack_compose_lazycolumn.data.PusatDataNotifFB
-import com.example.jetpack_compose_lazycolumn.data.PusatDataProfil
-import com.example.jetpack_compose_lazycolumn.data.PusatDataWhatsApp
-import com.example.jetpack_compose_lazycolumn.model.ModelWhatsapp
+import com.example.jetpack_compose_lazycolumn.data.BasisDataWhatsappChat
 import com.example.jetpack_compose_lazycolumn.view.ViewDataNotif
 
 @Composable
@@ -122,7 +120,7 @@ fun HalamanWhatsapp() {
                 .background(Color(android.graphics.Color.parseColor("#1c0001")))
         ){
 
-            val itemProfil = remember { PusatDataWhatsApp.listChatWhatsapp}
+            val itemProfil = remember { BasisDataWhatsappChat.listChatWhatsapp}
 
             Column(){
 
@@ -132,7 +130,7 @@ fun HalamanWhatsapp() {
                     items(
                         items = itemProfil,
                         itemContent = {
-                            KumpulanViewProfil(modelWhatsapp = it)
+                            KumpulanViewProfil(templateFieldWhatsappChat = it)
                         }
                     )
                 }

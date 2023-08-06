@@ -22,11 +22,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.jetpack_compose_lazycolumn.R
-import com.example.jetpack_compose_lazycolumn.model.ModelWhatsapp
+import com.example.jetpack_compose_lazycolumn.model.TemplateFieldWhatsappChat
 
 @Composable
 // Row Viewitem Abdus Salam
-fun KumpulanViewProfil(modelWhatsapp: ModelWhatsapp){
+fun KumpulanViewProfil(templateFieldWhatsappChat: TemplateFieldWhatsappChat){
 
     Row(
         modifier = Modifier
@@ -35,7 +35,7 @@ fun KumpulanViewProfil(modelWhatsapp: ModelWhatsapp){
         verticalAlignment = Alignment.CenterVertically
     ){
         Image(
-            painter = painterResource(id = modelWhatsapp.fotoProfil),
+            painter = painterResource(id = templateFieldWhatsappChat.fotoProfil),
             contentDescription = null,
             modifier = Modifier
                 .size(48.dp)
@@ -51,7 +51,7 @@ fun KumpulanViewProfil(modelWhatsapp: ModelWhatsapp){
                 horizontalArrangement = Arrangement.SpaceBetween
             ){
                 Text(
-                    text = modelWhatsapp.namaPengguna,
+                    text = templateFieldWhatsappChat.namaPengguna,
                     fontWeight = FontWeight.SemiBold,
                     color = Color.White,
                     letterSpacing = 0.5.sp
@@ -69,7 +69,7 @@ fun KumpulanViewProfil(modelWhatsapp: ModelWhatsapp){
                 horizontalArrangement = Arrangement.SpaceBetween
             ){
                 Text(
-                    text = modelWhatsapp.cuplikanChat,
+                    text = templateFieldWhatsappChat.cuplikanChat,
                     letterSpacing = 0.2.sp,
                     color = Color(android.graphics.Color.parseColor("#878b8f"))
                 )
@@ -77,7 +77,7 @@ fun KumpulanViewProfil(modelWhatsapp: ModelWhatsapp){
                     verticalAlignment = Alignment.CenterVertically
                 ){
 
-                    if(modelWhatsapp.pinned == true){
+                    if(templateFieldWhatsappChat.pinned == true){
 
                         Image(
                             painter = painterResource(id = R.drawable.pinned),
@@ -90,7 +90,7 @@ fun KumpulanViewProfil(modelWhatsapp: ModelWhatsapp){
 
                     }
 
-                    if (modelWhatsapp.jumlahNotif > 0){
+                    if (templateFieldWhatsappChat.jumlahNotif > 0){
 
                         Box(
                             modifier = Modifier
@@ -100,7 +100,7 @@ fun KumpulanViewProfil(modelWhatsapp: ModelWhatsapp){
                             contentAlignment = Alignment.Center
                         ){
                             Text(
-                                text=modelWhatsapp.jumlahNotif.toString(),
+                                text=templateFieldWhatsappChat.jumlahNotif.toString(),
                                 fontSize = 12.sp,
                                 fontWeight = FontWeight.SemiBold,
                                 modifier = Modifier

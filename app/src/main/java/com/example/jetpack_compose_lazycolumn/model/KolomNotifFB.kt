@@ -16,7 +16,7 @@ data class KolomProfil(
     val fotoProfil: Int = 0
 )
 
-data class ModelWhatsapp(
+data class TemplateFieldWhatsappChat(
     val id: Int,
     val namaPengguna: String,
     val cuplikanChat: String,
