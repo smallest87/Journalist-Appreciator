@@ -4,7 +4,7 @@ import com.example.jetpack_compose_lazycolumn.R
 import com.example.jetpack_compose_lazycolumn.model.TemplateFieldWhatsappChat
 import com.example.jetpack_compose_lazycolumn.model.TemplateFieldWhatsappUserProfile
 
-object BasisDataWhatsappChat {
+object BasisDataWhatsapp {
 
     val listWhatsappChat = listOf(
         TemplateFieldWhatsappChat(id = 1,namaPengguna = "Abdus Salam",cuplikanChat = "Hello",pinned = true,bisukan = false,jumlahNotif = 1,fotoProfil = R.drawable.fotoprofilabdussalam),
@@ -23,12 +23,9 @@ object BasisDataWhatsappChat {
         TemplateFieldWhatsappChat(id = 14,namaPengguna = "Gugun Banjar",cuplikanChat = "Kuesel aku",pinned = false,bisukan = false,jumlahNotif = 43,fotoProfil = R.drawable.fotoprofilgugunbanjar),
         TemplateFieldWhatsappChat(id = 15,namaPengguna = "Lukito Wahyu",cuplikanChat = "Remek...",pinned = false,bisukan = false,jumlahNotif = 1,fotoProfil = R.drawable.fotoprofillukitowahyu)
     )
-}
-
-object BasisDataWhatsappUserProfile {
 
     val listWhatsappUserProfile = listOf(
-        TemplateFieldWhatsappUserProfile(id = 1, fotoProfil = R.drawable.fotoprofilabdussalam, nomorPengguna = "+62 815-5589-9499", namaPengguna = "Abdus Salam",statusBisukan = false),
+        TemplateFieldWhatsappUserProfile(id = 1,fotoProfil = R.drawable.fotoprofilabdussalam, nomorPengguna = "+62 815-5589-9499", namaPengguna = "Abdus Salam",statusBisukan = false),
         TemplateFieldWhatsappUserProfile(id = 2,fotoProfil = R.drawable.fotoprofilrahmawati, nomorPengguna = "+62 815-5589-9499",namaPengguna = "Rahmawati",statusBisukan = false),
         TemplateFieldWhatsappUserProfile(id = 3,fotoProfil = R.drawable.fotoprofilgunawansasmita, nomorPengguna = "+62 815-5589-9499",namaPengguna = "Gunawan Sasmita",statusBisukan = false),
         TemplateFieldWhatsappUserProfile(id = 4,fotoProfil = R.drawable.fotoprofilbudiharianto, nomorPengguna = "+62 815-5589-9499",namaPengguna = "Budi Harianto",statusBisukan = false),
@@ -44,4 +41,5 @@ object BasisDataWhatsappUserProfile {
         TemplateFieldWhatsappUserProfile(id = 14,fotoProfil = R.drawable.fotoprofilgugunbanjar, nomorPengguna = "+62 815-5589-9499",namaPengguna = "Gugun Banjar",statusBisukan = false),
         TemplateFieldWhatsappUserProfile(id = 15,fotoProfil = R.drawable.fotoprofillukitowahyu, nomorPengguna = "+62 815-5589-9499",namaPengguna = "Lukito Wahyu",statusBisukan = false)
     )
+
 }
