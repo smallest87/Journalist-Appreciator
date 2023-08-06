@@ -1,6 +1,8 @@
 package com.example.jetpack_compose_lazycolumn.data
 
 import com.example.jetpack_compose_lazycolumn.R
+import com.example.jetpack_compose_lazycolumn.model.TemplateFieldJenisAksi
+import com.example.jetpack_compose_lazycolumn.model.TemplateFieldProjectList
 import com.example.jetpack_compose_lazycolumn.model.TemplateFieldWhatsappChat
 import com.example.jetpack_compose_lazycolumn.model.TemplateFieldWhatsappUserProfile
 
@@ -42,4 +44,19 @@ object BasisDataWhatsapp {
         TemplateFieldWhatsappUserProfile(id = 15,fotoProfil = R.drawable.fotoprofillukitowahyu, nomorPengguna = "+62 815-5589-9499",namaPengguna = "Lukito Wahyu",statusBisukan = false)
     )
 
+    val listProjectList = listOf(
+        TemplateFieldProjectList(id = 1,"Liputan Data Presiden RI","Liputan tentang kunjungan Presiden RI di PT Pindad Turen","Abdus Salam","06/08/2023"),
+        TemplateFieldProjectList(id = 2,"Wawancara Joko Widodo","Mewawancarai audio pada Liputan Presiden RI","Abdus Salam","06/08/2023"),
+        TemplateFieldProjectList(id = 3,"Liputan Foto Presiden RI","Pengambilan foto saat kunjungan Presiden RI di PT Pindad Turen","Abdus Salam","06/08/2023"),
+        TemplateFieldProjectList(id = 4,"Liputan Video Presiden RI","Pengambilan video saat kunjungan Presiden RI di PT Pindad Turen","Gunawan Sasimita","06/08/2023"),
+        TemplateFieldProjectList(id = 5,"Transkrip Audio Wawancara Joko Widodo","Transkrip audio wawancara","Rahmawati","06/08/2023")
+    )
+
+    val listAksi = listOf(
+        TemplateFieldJenisAksi(id = 1,"Ambil foto liputan","Foto","Tuntas","Abdus Salam"),
+        TemplateFieldJenisAksi(id = 2,"Ambil video liputan","Video","Proses", "Rahmawati"),
+        TemplateFieldJenisAksi(id = 3,"Wawancara narasumber","Audio","Proses","Rahmawati"),
+        TemplateFieldJenisAksi(id = 4,"Transkrip wawancara","Teks","Belum","Sulaiman"),
+        TemplateFieldJenisAksi(id = 5,"Tambah referensi","Link","Belum","Sulaiman")
+    )
 }
