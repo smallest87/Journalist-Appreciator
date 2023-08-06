@@ -120,7 +120,7 @@ fun HalamanWhatsapp() {
                 .background(Color(android.graphics.Color.parseColor("#1c0001")))
         ){
 
-            val itemProfil = remember { BasisDataWhatsappChat.listChatWhatsapp}
+            val itemProfil = remember { BasisDataWhatsappChat.listWhatsappChat}
 
             Column(){
 
