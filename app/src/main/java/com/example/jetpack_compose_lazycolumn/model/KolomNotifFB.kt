@@ -21,6 +21,7 @@ data class TemplateFieldWhatsappChat(
     val namaPengguna: String,
     val cuplikanChat: String,
     val pinned: Boolean,
+    val bisukan: Boolean,
     val jumlahNotif: Int,
     val fotoProfil: Int = 0
 )
