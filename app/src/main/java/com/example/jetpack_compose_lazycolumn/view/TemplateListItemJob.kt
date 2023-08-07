@@ -20,7 +20,6 @@ import com.example.jetpack_compose_lazycolumn.model.FormDataJob
 
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
-// Row Viewitem Abdus Salam
 fun TemplateListItemJob(formDataJob: FormDataJob){
 
         Card(

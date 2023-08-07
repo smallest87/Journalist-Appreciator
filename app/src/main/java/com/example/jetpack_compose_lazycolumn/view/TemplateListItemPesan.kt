@@ -25,7 +25,6 @@ import com.example.jetpack_compose_lazycolumn.R
 import com.example.jetpack_compose_lazycolumn.model.FormDataPesan
 
 @Composable
-// Row Viewitem Abdus Salam
 fun TemplateListItemPesan(formDataPesan: FormDataPesan){
 
     Row(
