@@ -12,6 +12,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import com.example.jetpack_compose_lazycolumn.ui.theme.LazyColumnTheme
+import com.example.jetpack_compose_lazycolumn.view.TampilanAwal
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

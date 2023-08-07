@@ -1,4 +1,4 @@
-package com.example.jetpack_compose_lazycolumn
+package com.example.jetpack_compose_lazycolumn.view
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
@@ -23,11 +23,12 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.jetpack_compose_lazycolumn.data.FormDataFacebook
+import com.example.jetpack_compose_lazycolumn.R
+import com.example.jetpack_compose_lazycolumn.model.FormDataFacebook
 import com.example.jetpack_compose_lazycolumn.ui.theme.fontKu
 
 @Composable
-fun TemplateListItemFacebook(formDataFacebook: FormDataFacebook){
+fun TemplateListItemBeranda(formDataFacebook: FormDataFacebook){
     Card (
         modifier = Modifier
             .padding(horizontal = 0.dp, vertical = 8.dp)

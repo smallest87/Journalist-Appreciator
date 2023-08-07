@@ -1,4 +1,4 @@
-package com.example.jetpack_compose_lazycolumn
+package com.example.jetpack_compose_lazycolumn.view
 
 import TemplateListItemJob
 import TemplateListItemPesan
@@ -27,9 +27,8 @@ import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
-import com.example.jetpack_compose_lazycolumn.basisdata.PusatDataFacebook
-import com.example.jetpack_compose_lazycolumn.basisdata.BasisDataManual
-import com.example.jetpack_compose_lazycolumn.view.TemplateListItemNotif
+import com.example.jetpack_compose_lazycolumn.R
+import com.example.jetpack_compose_lazycolumn.data.BasisDataManual
 
 @Composable
 fun TampilanAwal(){
@@ -105,7 +104,7 @@ fun MenuTabAtas() {
 @Composable
 fun TabBeranda() {
 
-    val itemFacebook = remember { PusatDataFacebook.recordDataFacebook}
+    val itemFacebook = remember { BasisDataManual.dataFacebook}
 
     Column(){
 
@@ -115,7 +114,7 @@ fun TabBeranda() {
             items(
                 items = itemFacebook,
                 itemContent = {
-                    TemplateListItemFacebook(formDataFacebook = it)
+                    TemplateListItemBeranda(formDataFacebook = it)
                 }
             )
         }

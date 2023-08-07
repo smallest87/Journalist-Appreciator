@@ -43,3 +43,20 @@ data class TemplateFieldJenisAksi(
     val statusTugas: String,
     val PemegangHakCiptaProduk: String
 )
+
+data class FormDataFacebook(
+    val id: Int,
+    val namaProfilString: String,
+    val ikonProfilImage: Int = 0,
+    val waktuPostingan: String,
+    val postinganString: String,
+    val fotoProfilImage: Int = 0
+)
+
+data class KolomDataWisata(
+    val id: Int,
+    val judul: String,
+    val lokasi: String,
+    val deskripsi: String,
+    val wisataImageId: Int = 0
+)
