@@ -1,5 +1,7 @@
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
+import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -16,6 +18,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.jetpack_compose_lazycolumn.model.TemplateFieldJob
 
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
 // Row Viewitem Abdus Salam
 fun KumpulanViewItemJob(templateFieldJob: TemplateFieldJob){
@@ -32,28 +35,55 @@ fun KumpulanViewItemJob(templateFieldJob: TemplateFieldJob){
                     .fillMaxWidth()
             ) {
                 Column() {
-                    Text(
-                        modifier = Modifier
-                            .padding(10.dp),
-                        text = templateFieldJob.namaJob,
-                        fontWeight = FontWeight.Bold
-                    )
+                    Row(){
+                        Text(
+                            modifier = Modifier
+                                .padding(10.dp),
+                            text = templateFieldJob.topikBerita,
+                            fontWeight = FontWeight.SemiBold
+                        )
+                    }
+
                     Divider(thickness = 1.dp, color = Color.Gray)
                     Text(
                         modifier = Modifier
                             .padding(10.dp),
-                        text = templateFieldJob.deskripsiJob,
+                        text = templateFieldJob.detailJob,
                         fontSize = 15.sp,
                         letterSpacing = 0.5.sp,
                         lineHeight = 20.sp
                     )
-                    Row() {
+                    FlowRow(
+                        modifier = Modifier
+                            .padding(12.dp)
+                    ) {
                         Button(
                             onClick = { /*TODO*/ },
                             modifier = Modifier
-                                .padding(10.dp)
+                                .padding(4.dp)
                         ) {
-                            Text(text = "Ambil Job")
+                            Text(text = templateFieldJob.jenisJob)
+                        }
+                        Button(
+                            onClick = { /*TODO*/ },
+                            modifier = Modifier
+                                .padding(4.dp)
+                        ) {
+                            Text(text = templateFieldJob.jenisJob)
+                        }
+                        Button(
+                            onClick = { /*TODO*/ },
+                            modifier = Modifier
+                                .padding(4.dp)
+                        ) {
+                            Text(text = templateFieldJob.jenisJob)
+                        }
+                        Button(
+                            onClick = { /*TODO*/ },
+                            modifier = Modifier
+                                .padding(4.dp)
+                        ) {
+                            Text(text = templateFieldJob.jenisJob)
                         }
                     }
                 }

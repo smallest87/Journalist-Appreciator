@@ -45,11 +45,10 @@ object BasisDataWhatsapp {
     )
 
     val listJob = listOf(
-        TemplateFieldJob(id = 1,"Liputan Data Presiden RI","Liputan tentang kunjungan Presiden RI di PT Pindad Turen","Abdus Salam","06/08/2023"),
-        TemplateFieldJob(id = 2,"Wawancara Joko Widodo","Mewawancarai audio pada Liputan Presiden RI","Abdus Salam","06/08/2023"),
-        TemplateFieldJob(id = 3,"Liputan Foto Presiden RI","Pengambilan foto saat kunjungan Presiden RI di PT Pindad Turen","Abdus Salam","06/08/2023"),
-        TemplateFieldJob(id = 4,"Liputan Video Presiden RI","Pengambilan video saat kunjungan Presiden RI di PT Pindad Turen","Gunawan Sasimita","06/08/2023"),
-        TemplateFieldJob(id = 5,"Transkrip Audio Wawancara Joko Widodo","Transkrip audio wawancara","Rahmawati","06/08/2023")
+        TemplateFieldJob(id = 1,"Audio","Presiden Tinjau Pabrik Peluru PT Pindad","Liputan tentang kunjungan Presiden RI di PT Pindad Turen","Abdus Salam","06/08/2023"),
+        TemplateFieldJob(id = 2, "Foto","PD dan Perumda Ikuti Lomba Baris","Mewawancarai audio pada Liputan Presiden RI","Abdus Salam","06/08/2023"),
+        TemplateFieldJob(id = 3,"Video", "Maling Curi 2 Motor di Penginapan Sawojajar","Pengambilan foto saat kunjungan Presiden RI di PT Pindad Turen","Abdus Salam","06/08/2023"),
+        TemplateFieldJob(id = 4, "Transkrip","Ketua Dewan Soroti Pembongkaran Pagar Balaikota","Pengambilan video saat kunjungan Presiden RI di PT Pindad Turen","Gunawan Sasimita","06/08/2023")
     )
 
     val listAksi = listOf(

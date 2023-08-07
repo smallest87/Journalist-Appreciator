@@ -29,8 +29,9 @@ data class TemplateFieldWhatsappUserProfile(
 
 data class TemplateFieldJob(
     val id: Int,
-    val namaJob: String,
-    val deskripsiJob: String,
+    val jenisJob: String,
+    val topikBerita: String,
+    val detailJob: String,
     val namaPekerja: String,
     val waktuJob: String
 )
