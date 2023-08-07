@@ -16,17 +16,16 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.jetpack_compose_lazycolumn.model.TemplateFieldJob
+import com.example.jetpack_compose_lazycolumn.model.FormDataJob
 
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
 // Row Viewitem Abdus Salam
-fun KumpulanViewItemJob(templateFieldJob: TemplateFieldJob){
-
+fun TemplateListItemJob(formDataJob: FormDataJob){
 
         Card(
             modifier = Modifier
-                .padding(bottom = 24.dp),
+                .padding(top = 24.dp,start = 24.dp,end = 24.dp),
             elevation = CardDefaults.cardElevation(10.dp),
             border = BorderStroke(1.dp, Color.Gray)
         ) {
@@ -39,7 +38,7 @@ fun KumpulanViewItemJob(templateFieldJob: TemplateFieldJob){
                         Text(
                             modifier = Modifier
                                 .padding(10.dp),
-                            text = templateFieldJob.topikBerita,
+                            text = formDataJob.topikBerita,
                             fontWeight = FontWeight.SemiBold
                         )
                     }
@@ -48,7 +47,7 @@ fun KumpulanViewItemJob(templateFieldJob: TemplateFieldJob){
                     Text(
                         modifier = Modifier
                             .padding(10.dp),
-                        text = templateFieldJob.detailJob,
+                        text = formDataJob.detailJob,
                         fontSize = 15.sp,
                         letterSpacing = 0.5.sp,
                         lineHeight = 20.sp
@@ -62,28 +61,28 @@ fun KumpulanViewItemJob(templateFieldJob: TemplateFieldJob){
                             modifier = Modifier
                                 .padding(4.dp)
                         ) {
-                            Text(text = templateFieldJob.jenisJob)
+                            Text(text = formDataJob.jenisJob)
                         }
                         Button(
                             onClick = { /*TODO*/ },
                             modifier = Modifier
                                 .padding(4.dp)
                         ) {
-                            Text(text = templateFieldJob.jenisJob)
+                            Text(text = formDataJob.jenisJob)
                         }
                         Button(
                             onClick = { /*TODO*/ },
                             modifier = Modifier
                                 .padding(4.dp)
                         ) {
-                            Text(text = templateFieldJob.jenisJob)
+                            Text(text = formDataJob.jenisJob)
                         }
                         Button(
                             onClick = { /*TODO*/ },
                             modifier = Modifier
                                 .padding(4.dp)
                         ) {
-                            Text(text = templateFieldJob.jenisJob)
+                            Text(text = formDataJob.jenisJob)
                         }
                     }
                 }

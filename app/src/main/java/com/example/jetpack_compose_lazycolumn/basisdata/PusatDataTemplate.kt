@@ -1,6 +1,7 @@
-package com.example.jetpack_compose_lazycolumn.data
+package com.example.jetpack_compose_lazycolumn.basisdata
 
 import com.example.jetpack_compose_lazycolumn.R
+import com.example.jetpack_compose_lazycolumn.data.KolomDataTemplate
 
 object PusatDataTemplate {
     val recordValue =

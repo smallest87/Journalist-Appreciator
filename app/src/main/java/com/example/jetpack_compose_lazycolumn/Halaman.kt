@@ -1,10 +1,9 @@
 package com.example.jetpack_compose_lazycolumn
 
-import KumpulanViewItemJob
-import KumpulanViewProfil
+import TemplateListItemJob
+import TemplateListItemPesan
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.lazy.LazyColumn
@@ -18,7 +17,6 @@ import androidx.compose.material3.Text
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.material3.Divider
 import androidx.compose.material3.Tab
 import androidx.compose.material3.TabRow
 import androidx.compose.runtime.getValue
@@ -28,15 +26,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.sp
-import com.example.jetpack_compose_lazycolumn.data.PusatDataFacebook
-import com.example.jetpack_compose_lazycolumn.data.PusatDataNotifFB
-import com.example.jetpack_compose_lazycolumn.data.BasisDataWhatsapp
-import com.example.jetpack_compose_lazycolumn.view.ViewDataNotif
+import com.example.jetpack_compose_lazycolumn.basisdata.PusatDataFacebook
+import com.example.jetpack_compose_lazycolumn.basisdata.BasisDataManual
+import com.example.jetpack_compose_lazycolumn.view.TemplateListItemNotif
 
 @Composable
-fun TabDanHalaman(){
+fun TampilanAwal(){
     Column(){
 
         // Baris Branding
@@ -55,7 +51,7 @@ fun TabDanHalaman(){
 fun MenuTabAtas() {
     var tabIndex by remember { mutableStateOf(0) }
 
-    val tabs = listOf("Beranda", "Pesan", "Market","Notif")
+    val tabs = listOf("Beranda", "Pesan", "Job","Notif")
 
     Column(
         modifier = Modifier
@@ -98,16 +94,36 @@ fun MenuTabAtas() {
             }
         }
         when (tabIndex) {
-            0 -> HalamanBeranda()
-            1 -> HalamanWhatsapp()
-            2 -> HalamanPesan()
-            3 -> HalamanNotifikasi()
+            0 -> TabBeranda()
+            1 -> TabPesan()
+            2 -> TabJob()
+            3 -> TabNotif()
         }
     }
 }
 
 @Composable
-fun HalamanWhatsapp() {
+fun TabBeranda() {
+
+    val itemFacebook = remember { PusatDataFacebook.recordDataFacebook}
+
+    Column(){
+
+//        HeaderPage()
+
+        LazyColumn(){
+            items(
+                items = itemFacebook,
+                itemContent = {
+                    TemplateListItemFacebook(formDataFacebook = it)
+                }
+            )
+        }
+    }
+
+}
+@Composable
+fun TabPesan() {
 
     // Kolom Kanvas
     Column(){
@@ -121,7 +137,7 @@ fun HalamanWhatsapp() {
                 .background(Color(android.graphics.Color.parseColor("#1c0001")))
         ){
 
-            val itemProfil = remember { BasisDataWhatsapp.listWhatsappChat}
+            val itemProfil = remember { BasisDataManual.dataWhatsappChat}
 
             Column(){
 
@@ -129,13 +145,63 @@ fun HalamanWhatsapp() {
                     items(
                         items = itemProfil,
                         itemContent = {
-                            KumpulanViewProfil(templateFieldWhatsappChat = it)
+                            TemplateListItemPesan(formDataPesan = it)
                         }
                     )
                 }
             }
         }
     }
+}
+
+@Composable
+fun TabJob() {
+
+    val itemJob = remember { BasisDataManual.dataJob}
+        LazyColumn(){
+            items(
+                items = itemJob,
+                itemContent = {
+                    TemplateListItemJob(formDataJob = it)
+                }
+            )
+        }
+}
+
+
+
+@Composable
+fun TabNotif() {
+
+    val itemNotif = remember { BasisDataManual.dataNotif}
+
+    Column(){
+
+//        HeaderPage()
+
+        LazyColumn(){
+            items(
+                items = itemNotif,
+                itemContent = {
+                    TemplateListItemNotif(formDataNotif = it)
+                }
+            )
+        }
+    }
+
+}
+
+@Composable
+fun Branding(namaMerek: String, ukuranFont: Int) {
+    Text(
+        text = namaMerek,
+        fontSize = ukuranFont.sp,
+        fontWeight = FontWeight.Bold,
+        color = Color.White,
+
+        modifier = Modifier
+            .padding(8.dp)
+    )
 }
 
 @Composable
@@ -169,119 +235,4 @@ fun BarisArsip() {
             )
         }
     }
-}
-
-@Composable
-fun HalamanBeranda() {
-
-    val itemFacebook = remember { PusatDataFacebook.recordDataFacebook}
-
-    Column(){
-
-//        HeaderPage()
-
-        LazyColumn(){
-            items(
-                items = itemFacebook,
-                itemContent = {
-                    ViewDataFacebook(kolomDataFacebook = it)
-                }
-            )
-        }
-    }
-
-}
-
-@Composable
-fun HalamanPesan() {
-
-    val itemJob = remember { BasisDataWhatsapp.listJob}
-
-    Column(
-        modifier = Modifier
-            .padding(24.dp)
-    ){
-
-        LazyColumn(){
-            items(
-                items = itemJob,
-                itemContent = {
-                    KumpulanViewItemJob(templateFieldJob = it)
-                }
-            )
-        }
-    }
-}
-
-
-
-@Composable
-fun HalamanNotifikasi() {
-
-    val itemNotif = remember { PusatDataNotifFB.recordDataNotifFacebook}
-
-    Column(){
-
-//        HeaderPage()
-
-        LazyColumn(){
-            items(
-                items = itemNotif,
-                itemContent = {
-                    ViewDataNotif(kolomNotifFB = it)
-                }
-            )
-        }
-    }
-
-}
-
-@Composable
-fun HeaderPage(){
-    Column(){
-
-        MenuTabAtas()
-        JudulHalaman("Notifikasi")
-
-        Divider(thickness = Dp.Hairline,color = Color.LightGray)
-    }
-}
-
-@Composable
-fun JudulHalaman(notif: String) {
-    Row(
-        verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.SpaceBetween,
-        modifier = Modifier
-            .background(Color.White)
-            .fillMaxWidth()
-    ){
-        Text(
-            text= notif,
-            fontSize = 24.sp,
-            fontWeight = FontWeight.Bold,
-            modifier = Modifier
-                .padding(vertical = 16.dp, horizontal = 8.dp)
-        )
-        Image(
-            painter = painterResource(id = R.drawable.lens),
-            contentDescription = null,
-            modifier = Modifier
-                .size(36.dp)
-                .padding(end = 8.dp)
-        )
-    }
-}
-
-@Composable
-fun Branding(namaMerek: String, ukuranFont: Int) {
-    Text(
-        text = namaMerek,
-        fontSize = ukuranFont.sp,
-        fontWeight = FontWeight.Bold,
-        color = Color.White,
-
-        modifier = Modifier
-            .padding(8.dp)
-    )
 }

@@ -1,6 +1,25 @@
 package com.example.jetpack_compose_lazycolumn.model
 
-data class KolomNotifFB(
+data class FormDataPesan(
+    val id: Int,
+    val fotoProfil: Int = 0,
+    val user: String,
+    val cuplikan: String,
+    val pinned: Boolean,
+    val bisukan: Boolean,
+    val notif: Int
+)
+
+data class FormDataJob(
+    val id: Int,
+    val jenisJob: String,
+    val topikBerita: String,
+    val detailJob: String,
+    val namaPekerja: String,
+    val waktuJob: String
+)
+
+data class FormDataNotif(
     val id: Int,
     val notifDari: String,
     val aktivitas: String,
@@ -9,31 +28,12 @@ data class KolomNotifFB(
     val fotoNotifImage: Int = 0
 )
 
-data class TemplateFieldWhatsappChat(
-    val id: Int,
-    val fotoProfil: Int = 0,
-    val namaPengguna: String,
-    val cuplikanChat: String,
-    val pinned: Boolean,
-    val bisukan: Boolean,
-    val jumlahNotif: Int
-)
-
 data class TemplateFieldWhatsappUserProfile(
     val id: Int,
     val fotoProfil: Int = 0,
     val nomorPengguna: String,
     val namaPengguna: String,
     val statusBisukan: Boolean,
-)
-
-data class TemplateFieldJob(
-    val id: Int,
-    val jenisJob: String,
-    val topikBerita: String,
-    val detailJob: String,
-    val namaPekerja: String,
-    val waktuJob: String
 )
 
 data class TemplateFieldJenisAksi(

@@ -1,7 +1,5 @@
 package com.example.jetpack_compose_lazycolumn
 
-import androidx.compose.animation.scaleIn
-import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -22,17 +20,14 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.font.Font
-import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.jetpack_compose_lazycolumn.data.KolomDataFacebook
+import com.example.jetpack_compose_lazycolumn.data.FormDataFacebook
 import com.example.jetpack_compose_lazycolumn.ui.theme.fontKu
 
 @Composable
-fun ViewDataFacebook(kolomDataFacebook: KolomDataFacebook){
+fun TemplateListItemFacebook(formDataFacebook: FormDataFacebook){
     Card (
         modifier = Modifier
             .padding(horizontal = 0.dp, vertical = 8.dp)
@@ -49,7 +44,7 @@ fun ViewDataFacebook(kolomDataFacebook: KolomDataFacebook){
                 modifier = Modifier
                     .padding(vertical = 16.dp, horizontal = 8.dp)
             ){
-                FotoProfil(kolomDataFacebook = kolomDataFacebook)
+                FotoProfil(formDataFacebook = formDataFacebook)
                 Column(
                     modifier = Modifier
                         .fillMaxWidth()
@@ -57,14 +52,14 @@ fun ViewDataFacebook(kolomDataFacebook: KolomDataFacebook){
                         .padding(horizontal = 8.dp)
                 ) {
                     Text(
-                        text = kolomDataFacebook.namaProfilString,
+                        text = formDataFacebook.namaProfilString,
                         Modifier
                             .fillMaxWidth(),
                         fontSize = 16.sp,
                         fontWeight = FontWeight.Bold
                     )
                     Text(
-                        text = kolomDataFacebook.waktuPostingan,
+                        text = formDataFacebook.waktuPostingan,
                         fontSize = 12.sp,
                         color = Color.Gray
                     )
@@ -73,12 +68,13 @@ fun ViewDataFacebook(kolomDataFacebook: KolomDataFacebook){
             Text(
                 modifier = Modifier
                     .padding(8.dp),
-                text = kolomDataFacebook.postinganString,
+                text = formDataFacebook.postinganString,
                 fontSize = 16.sp,
-                fontFamily = fontKu
+                fontFamily = fontKu,
+                letterSpacing = 0.2.sp
             )
 
-            FotoPosting(kolomDataFacebook = kolomDataFacebook)
+            FotoPosting(formDataFacebook = formDataFacebook)
             Row(
                 modifier = Modifier
                     .padding(vertical = 16.dp)
@@ -110,9 +106,9 @@ fun ViewDataFacebook(kolomDataFacebook: KolomDataFacebook){
 }
 
 @Composable
-private fun FotoProfil(kolomDataFacebook: KolomDataFacebook) {
+private fun FotoProfil(formDataFacebook: FormDataFacebook) {
     Image(
-        painter = painterResource(id = kolomDataFacebook.fotoProfilImage),
+        painter = painterResource(id = formDataFacebook.fotoProfilImage),
         contentDescription = null,
         contentScale = ContentScale.Crop,
         modifier = Modifier
@@ -122,11 +118,11 @@ private fun FotoProfil(kolomDataFacebook: KolomDataFacebook) {
 }
 
 @Composable
-private fun FotoPosting(kolomDataFacebook: KolomDataFacebook) {
+private fun FotoPosting(formDataFacebook: FormDataFacebook) {
     Image(
         modifier = Modifier
             .fillMaxWidth(),
-        painter = painterResource(id = kolomDataFacebook.fotoProfilImage),
+        painter = painterResource(id = formDataFacebook.fotoProfilImage),
         contentDescription = null,
         contentScale = ContentScale.FillWidth
     )

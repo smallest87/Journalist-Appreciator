@@ -6,8 +6,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.unit.dp
-import com.example.jetpack_compose_lazycolumn.data.PusatDataTemplate
-import com.example.jetpack_compose_lazycolumn.data.PusatDataWisata
+import com.example.jetpack_compose_lazycolumn.basisdata.PusatDataTemplate
 
 @Composable
 fun TampilanBerandaTemplate() {

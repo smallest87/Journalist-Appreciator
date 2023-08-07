@@ -13,7 +13,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import com.example.jetpack_compose_lazycolumn.data.PusatDataFacebook
+import com.example.jetpack_compose_lazycolumn.basisdata.PusatDataFacebook
 import androidx.compose.material3.Text
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
@@ -52,7 +52,7 @@ fun TampilanBerandaFacebook() {
         items(
             items = itemWisata,
             itemContent = {
-                ViewDataFacebook(kolomDataFacebook = it)
+                TemplateListItemFacebook(formDataFacebook = it)
             }
         )
     }

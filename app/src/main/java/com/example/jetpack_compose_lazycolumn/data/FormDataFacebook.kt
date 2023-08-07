@@ -1,6 +1,6 @@
 package com.example.jetpack_compose_lazycolumn.data
 
-data class KolomDataFacebook(
+data class FormDataFacebook(
     val id: Int,
     val namaProfilString: String,
     val ikonProfilImage: Int = 0,

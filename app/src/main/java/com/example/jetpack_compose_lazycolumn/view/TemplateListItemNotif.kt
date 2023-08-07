@@ -2,7 +2,6 @@ package com.example.jetpack_compose_lazycolumn.view
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -23,10 +22,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.jetpack_compose_lazycolumn.model.KolomNotifFB
+import com.example.jetpack_compose_lazycolumn.model.FormDataNotif
 
 @Composable
-fun ViewDataNotif(kolomNotifFB: KolomNotifFB){
+fun TemplateListItemNotif(formDataNotif: FormDataNotif){
     Row (
         modifier = Modifier
             .fillMaxWidth()
@@ -36,25 +35,25 @@ fun ViewDataNotif(kolomNotifFB: KolomNotifFB){
         Row(
             verticalAlignment = Alignment.CenterVertically,
         ){
-            FotoNotif(kolomNotifFB = kolomNotifFB)
+            FotoNotif(formDataNotif = formDataNotif)
             Text(
 
                 modifier = Modifier
                     .padding(start = 4.dp),
                 text = buildAnnotatedString {
                     withStyle(style = SpanStyle(fontWeight = FontWeight.Bold)) {
-                        append(kolomNotifFB.notifDari)
+                        append(formDataNotif.notifDari)
                     }
 
                     append(" ")
-                    append(kolomNotifFB.aktivitas)
+                    append(formDataNotif.aktivitas)
                     append(" ")
 
                     withStyle(
                         style = SpanStyle(
                             fontWeight = FontWeight.Bold
                         )){
-                        append(kolomNotifFB.namaObyekString)
+                        append(formDataNotif.namaObyekString)
                     }
 
                     append(".")
@@ -64,7 +63,7 @@ fun ViewDataNotif(kolomNotifFB: KolomNotifFB){
                             color = Color.Gray,
                             fontSize = 12.sp
                         )) {
-                        append(kolomNotifFB.waktuNotifString)
+                        append(formDataNotif.waktuNotifString)
                     }
                 }
             )
@@ -76,9 +75,9 @@ fun ViewDataNotif(kolomNotifFB: KolomNotifFB){
     Divider(thickness = 1.dp, color = Color.LightGray)
 }
 @Composable
-private fun FotoNotif(kolomNotifFB: KolomNotifFB) {
+private fun FotoNotif(formDataNotif: FormDataNotif) {
     Image(
-        painter = painterResource(id = kolomNotifFB.fotoNotifImage),
+        painter = painterResource(id = formDataNotif.fotoNotifImage),
         contentDescription = null,
         contentScale = ContentScale.Crop,
         modifier = Modifier

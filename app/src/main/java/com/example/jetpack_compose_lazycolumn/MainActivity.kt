@@ -23,7 +23,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    AplikasiHalamanNotifikasi()
+                    PraTampilanAwal()
                 }
             }
         }
@@ -33,10 +33,10 @@ class MainActivity : ComponentActivity() {
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun AplikasiHalamanNotifikasi() {
+fun PraTampilanAwal() {
     Scaffold(
         content = {
-            TabDanHalaman()
+            TampilanAwal()
         }
     )
 }
