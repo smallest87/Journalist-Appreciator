@@ -1,4 +1,4 @@
-package com.example.jetpack_compose_lazycolumn.ui.theme
+package com.javasatu.journalistappreciator.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

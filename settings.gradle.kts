@@ -13,5 +13,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Jetpack_Compose_LazyColumn"
+rootProject.name = "Jounalist Appreciator"
 include(":app")

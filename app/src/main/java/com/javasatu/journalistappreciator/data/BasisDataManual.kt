@@ -1,12 +1,12 @@
-package com.example.jetpack_compose_lazycolumn.data
+package com.javasatu.journalistappreciator.data
 
-import com.example.jetpack_compose_lazycolumn.R
-import com.example.jetpack_compose_lazycolumn.model.FormDataFacebook
-import com.example.jetpack_compose_lazycolumn.model.TemplateFieldJenisAksi
-import com.example.jetpack_compose_lazycolumn.model.FormDataJob
-import com.example.jetpack_compose_lazycolumn.model.FormDataPesan
-import com.example.jetpack_compose_lazycolumn.model.FormDataNotif
-import com.example.jetpack_compose_lazycolumn.model.TemplateFieldWhatsappUserProfile
+import com.javasatu.journalistappreciator.R
+import com.javasatu.journalistappreciator.model.FormDataFacebook
+import com.javasatu.journalistappreciator.model.TemplateFieldJenisAksi
+import com.javasatu.journalistappreciator.model.FormDataJob
+import com.javasatu.journalistappreciator.model.FormDataPesan
+import com.javasatu.journalistappreciator.model.FormDataNotif
+import com.javasatu.journalistappreciator.model.TemplateFieldWhatsappUserProfile
 
 object BasisDataManual {
 

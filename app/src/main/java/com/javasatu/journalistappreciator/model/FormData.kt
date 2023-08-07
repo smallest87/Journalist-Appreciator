@@ -1,4 +1,4 @@
-package com.example.jetpack_compose_lazycolumn.model
+package com.javasatu.journalistappreciator.model
 
 data class FormDataPesan(
     val id: Int,

@@ -1,4 +1,4 @@
-package com.example.jetpack_compose_lazycolumn.view
+package com.javasatu.journalistappreciator.view
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
@@ -23,9 +23,9 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.jetpack_compose_lazycolumn.R
-import com.example.jetpack_compose_lazycolumn.model.FormDataFacebook
-import com.example.jetpack_compose_lazycolumn.ui.theme.fontKu
+import com.javasatu.journalistappreciator.R
+import com.javasatu.journalistappreciator.model.FormDataFacebook
+import com.javasatu.journalistappreciator.ui.theme.fontKu
 
 @Composable
 fun TemplateListItemBeranda(formDataFacebook: FormDataFacebook){

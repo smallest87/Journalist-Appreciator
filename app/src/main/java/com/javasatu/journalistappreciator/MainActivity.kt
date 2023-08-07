@@ -1,4 +1,4 @@
-package com.example.jetpack_compose_lazycolumn
+package com.javasatu.journalistappreciator
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -11,8 +11,8 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import com.example.jetpack_compose_lazycolumn.ui.theme.LazyColumnTheme
-import com.example.jetpack_compose_lazycolumn.view.TampilanAwal
+import com.javasatu.journalistappreciator.ui.theme.LazyColumnTheme
+import com.javasatu.journalistappreciator.view.TampilanAwal
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

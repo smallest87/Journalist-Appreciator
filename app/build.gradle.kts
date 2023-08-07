@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.jetpack_compose_lazycolumn"
+    namespace = "com.javasatu.journalistappreciator"
     compileSdk = 33
 
     defaultConfig {
-        applicationId = "com.example.jetpack_compose_lazycolumn"
+        applicationId = "com.javasatu.journalistappreciator"
         minSdk = 24
         targetSdk = 33
         versionCode = 1

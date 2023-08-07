@@ -1,4 +1,4 @@
-package com.example.jetpack_compose_lazycolumn.view
+package com.javasatu.journalistappreciator.view
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
@@ -22,7 +22,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.jetpack_compose_lazycolumn.model.FormDataNotif
+import com.javasatu.journalistappreciator.model.FormDataNotif
 
 @Composable
 fun TemplateListItemNotif(formDataNotif: FormDataNotif){

@@ -1,4 +1,4 @@
-package com.example.jetpack_compose_lazycolumn.ui.theme
+package com.javasatu.journalistappreciator.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
@@ -6,7 +6,7 @@ import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
-import com.example.jetpack_compose_lazycolumn.R
+import com.javasatu.journalistappreciator.R
 
 // Set of Material typography styles to start with
 val Typography = Typography(

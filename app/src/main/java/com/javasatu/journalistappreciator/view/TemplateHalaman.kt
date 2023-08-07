@@ -1,4 +1,4 @@
-package com.example.jetpack_compose_lazycolumn.view
+package com.javasatu.journalistappreciator.view
 
 import TemplateListItemJob
 import TemplateListItemPesan
@@ -27,8 +27,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.material3.Text
 import androidx.compose.material3.Tab
 import androidx.compose.material3.TabRow
-import com.example.jetpack_compose_lazycolumn.R
-import com.example.jetpack_compose_lazycolumn.data.BasisDataManual
+import com.javasatu.journalistappreciator.R
+import com.javasatu.journalistappreciator.data.BasisDataManual
 
 @Composable
 fun TampilanAwal(){
@@ -40,7 +40,7 @@ fun TampilanAwal(){
                 .fillMaxWidth()
                 .background(Color(android.graphics.Color.parseColor("#480003")))
         ){
-            Branding("AJD - Alat Jurnalis Digital™",16)
+            Branding("Journalist Appreciator™",16)
         }
         MenuTabAtas()
     }

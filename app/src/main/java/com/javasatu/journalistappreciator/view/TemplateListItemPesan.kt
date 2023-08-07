@@ -21,8 +21,8 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.jetpack_compose_lazycolumn.R
-import com.example.jetpack_compose_lazycolumn.model.FormDataPesan
+import com.javasatu.journalistappreciator.R
+import com.javasatu.journalistappreciator.model.FormDataPesan
 
 @Composable
 fun TemplateListItemPesan(formDataPesan: FormDataPesan){
