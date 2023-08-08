@@ -45,7 +45,7 @@ fun ViewModelPostBeranda(formDataFacebook: FormDataFacebook){
                 modifier = Modifier
                     .padding(vertical = 16.dp, horizontal = 8.dp)
             ){
-                FotoProfil(formDataFacebook = formDataFacebook)
+                FotoProfilBeranda(formDataFacebook = formDataFacebook)
                 Column(
                     modifier = Modifier
                         .fillMaxWidth()
@@ -107,7 +107,7 @@ fun ViewModelPostBeranda(formDataFacebook: FormDataFacebook){
 }
 
 @Composable
-private fun FotoProfil(formDataFacebook: FormDataFacebook) {
+private fun FotoProfilBeranda(formDataFacebook: FormDataFacebook) {
     Image(
         painter = painterResource(id = formDataFacebook.fotoProfilImage),
         contentDescription = null,
