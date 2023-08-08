@@ -2,6 +2,7 @@ package com.javasatu.journalistappreciator.view
 
 import ViewModelDaftarJob
 import ViewModelChatPesan
+import ViewModelDaftarJobFlat
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
@@ -161,7 +162,7 @@ fun TabJob() {
             items(
                 items = itemJob,
                 itemContent = {
-                    ViewModelDaftarJob(formDataJob = it)
+                    ViewModelDaftarJobFlat(formDataJob = it)
                 }
             )
         }
