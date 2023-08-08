@@ -55,33 +55,14 @@ fun ViewModelDaftarJob(formDataJob: FormDataJob){
                         modifier = Modifier
                             .padding(12.dp)
                     ) {
-                        Button(
-                            onClick = { /*TODO*/ },
-                            modifier = Modifier
-                                .padding(4.dp)
-                        ) {
-                            Text(text = formDataJob.jenisJob)
-                        }
-                        Button(
-                            onClick = { /*TODO*/ },
-                            modifier = Modifier
-                                .padding(4.dp)
-                        ) {
-                            Text(text = formDataJob.jenisJob)
-                        }
-                        Button(
-                            onClick = { /*TODO*/ },
-                            modifier = Modifier
-                                .padding(4.dp)
-                        ) {
-                            Text(text = formDataJob.jenisJob)
-                        }
-                        Button(
-                            onClick = { /*TODO*/ },
-                            modifier = Modifier
-                                .padding(4.dp)
-                        ) {
-                            Text(text = formDataJob.jenisJob)
+                        formDataJob.jenisJob.forEach{
+                            Button(
+                                onClick = { /*TODO*/ },
+                                modifier = Modifier
+                                    .padding(4.dp)
+                            ) {
+                                Text(text = it)
+                            }
                         }
                     }
                 }

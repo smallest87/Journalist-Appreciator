@@ -12,7 +12,7 @@ data class FormDataPesan(
 
 data class FormDataJob(
     val id: Int,
-    val jenisJob: String,
+    val jenisJob:List<String>,
     val topikBerita: String,
     val detailJob: String,
     val namaPekerja: String,
@@ -59,4 +59,9 @@ data class KolomDataWisata(
     val lokasi: String,
     val deskripsi: String,
     val wisataImageId: Int = 0
+)
+
+data class FormDataJenisJob(
+    val id: Int,
+    val daftarJob: String
 )

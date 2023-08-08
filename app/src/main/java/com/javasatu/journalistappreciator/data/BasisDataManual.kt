@@ -2,6 +2,7 @@ package com.javasatu.journalistappreciator.data
 
 import com.javasatu.journalistappreciator.R
 import com.javasatu.journalistappreciator.model.FormDataFacebook
+import com.javasatu.journalistappreciator.model.FormDataJenisJob
 import com.javasatu.journalistappreciator.model.TemplateFieldJenisAksi
 import com.javasatu.journalistappreciator.model.FormDataJob
 import com.javasatu.journalistappreciator.model.FormDataPesan
@@ -47,10 +48,10 @@ object BasisDataManual {
     )
 
     val dataJob = listOf(
-        FormDataJob(id = 1,"Audio","Presiden Tinjau Pabrik Peluru PT Pindad","Liputan tentang kunjungan Presiden RI di PT Pindad Turen","Abdus Salam","06/08/2023"),
-        FormDataJob(id = 2, "Foto","PD dan Perumda Ikuti Lomba Baris","Mewawancarai audio pada Liputan Presiden RI","Abdus Salam","06/08/2023"),
-        FormDataJob(id = 3,"Video", "Maling Curi 2 Motor di Penginapan Sawojajar","Pengambilan foto saat kunjungan Presiden RI di PT Pindad Turen","Abdus Salam","06/08/2023"),
-        FormDataJob(id = 4, "Transkrip","Ketua Dewan Soroti Pembongkaran Pagar Balaikota","Pengambilan video saat kunjungan Presiden RI di PT Pindad Turen","Gunawan Sasimita","06/08/2023")
+        FormDataJob(id = 1, jenisJob = listOf("Audio","Foto","Video","Transkrip"),"Presiden Tinjau Pabrik Peluru PT Pindad","Liputan tentang kunjungan Presiden RI di PT Pindad Turen","Abdus Salam","06/08/2023"),
+        FormDataJob(id = 2, jenisJob = listOf("Foto","Video","Transkrip"),"PD dan Perumda Ikuti Lomba Baris","Mewawancarai audio pada Liputan Presiden RI","Abdus Salam","06/08/2023"),
+        FormDataJob(id = 3, jenisJob = listOf("Video","Transkrip"), "Maling Curi 2 Motor di Penginapan Sawojajar","Pengambilan foto saat kunjungan Presiden RI di PT Pindad Turen","Abdus Salam","06/08/2023"),
+        FormDataJob(id = 4, jenisJob = listOf("Transkrip"),"Ketua Dewan Soroti Pembongkaran Pagar Balaikota","Pengambilan video saat kunjungan Presiden RI di PT Pindad Turen","Gunawan Sasimita","06/08/2023")
     )
 
     val listAksi = listOf(
@@ -104,6 +105,13 @@ object BasisDataManual {
         FormDataFacebook(id = 10,namaProfilString = "Budi Fathony",postinganString = "Kota Malang",waktuPostingan = "21h",fotoProfilImage = R.drawable.p10),
         FormDataFacebook(id = 11,namaProfilString = "Zahir R Metallic",postinganString = "Kota Malang",waktuPostingan = "22h",fotoProfilImage = R.drawable.p11),
         FormDataFacebook(id = 12,namaProfilString = "Suryadi",postinganString = "Kota Malang",waktuPostingan = "23h",fotoProfilImage = R.drawable.p12)
+    )
+
+    val dataTes = listOf(
+        FormDataJenisJob(id = 1,daftarJob = "Wawancara, Audio, Video, Transkrip"),
+        FormDataJenisJob(id = 1,daftarJob = "Wawancara, Audio, Video, Transkrip"),
+        FormDataJenisJob(id = 1,daftarJob = "Wawancara, Audio, Video, Transkrip"),
+        FormDataJenisJob(id = 1,daftarJob = "Wawancara, Audio, Video, Transkrip"),
     )
 
 }
