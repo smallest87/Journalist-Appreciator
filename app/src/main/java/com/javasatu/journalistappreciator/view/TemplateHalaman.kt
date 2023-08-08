@@ -1,7 +1,7 @@
 package com.javasatu.journalistappreciator.view
 
-import TemplateListItemJob
-import TemplateListItemPesan
+import ViewModelDaftarJob
+import ViewModelChatPesan
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
@@ -114,7 +114,7 @@ fun TabBeranda() {
             items(
                 items = itemFacebook,
                 itemContent = {
-                    TemplateListItemBeranda(formDataFacebook = it)
+                    ViewModelPostBeranda(formDataFacebook = it)
                 }
             )
         }
@@ -144,7 +144,7 @@ fun TabPesan() {
                     items(
                         items = itemProfil,
                         itemContent = {
-                            TemplateListItemPesan(formDataPesan = it)
+                            ViewModelChatPesan(formDataPesan = it)
                         }
                     )
                 }
@@ -161,7 +161,7 @@ fun TabJob() {
             items(
                 items = itemJob,
                 itemContent = {
-                    TemplateListItemJob(formDataJob = it)
+                    ViewModelDaftarJob(formDataJob = it)
                 }
             )
         }
@@ -182,7 +182,7 @@ fun TabNotif() {
             items(
                 items = itemNotif,
                 itemContent = {
-                    TemplateListItemNotif(formDataNotif = it)
+                    ViewModelDaftarNotif(formDataNotif = it)
                 }
             )
         }

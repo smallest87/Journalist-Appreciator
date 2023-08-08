@@ -25,7 +25,7 @@ import com.javasatu.journalistappreciator.R
 import com.javasatu.journalistappreciator.model.FormDataPesan
 
 @Composable
-fun TemplateListItemPesan(formDataPesan: FormDataPesan){
+fun ViewModelChatPesan(formDataPesan: FormDataPesan){
 
     Row(
         modifier = Modifier

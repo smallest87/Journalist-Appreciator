@@ -25,7 +25,7 @@ import androidx.compose.ui.unit.sp
 import com.javasatu.journalistappreciator.model.FormDataNotif
 
 @Composable
-fun TemplateListItemNotif(formDataNotif: FormDataNotif){
+fun ViewModelDaftarNotif(formDataNotif: FormDataNotif){
     Row (
         modifier = Modifier
             .fillMaxWidth()

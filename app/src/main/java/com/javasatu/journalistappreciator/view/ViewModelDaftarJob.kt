@@ -20,7 +20,7 @@ import com.javasatu.journalistappreciator.model.FormDataJob
 
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
-fun TemplateListItemJob(formDataJob: FormDataJob){
+fun ViewModelDaftarJob(formDataJob: FormDataJob){
 
         Card(
             modifier = Modifier

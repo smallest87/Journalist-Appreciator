@@ -28,7 +28,7 @@ import com.javasatu.journalistappreciator.model.FormDataFacebook
 import com.javasatu.journalistappreciator.ui.theme.fontKu
 
 @Composable
-fun TemplateListItemBeranda(formDataFacebook: FormDataFacebook){
+fun ViewModelPostBeranda(formDataFacebook: FormDataFacebook){
     Card (
         modifier = Modifier
             .padding(horizontal = 0.dp, vertical = 8.dp)
