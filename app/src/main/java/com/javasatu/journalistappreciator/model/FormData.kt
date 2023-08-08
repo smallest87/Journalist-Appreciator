@@ -2,7 +2,7 @@ package com.javasatu.journalistappreciator.model
 
 data class FormDataPesan(
     val id: Int,
-    val fotoProfil: Int = 0,
+    val fotoProfilChatPesan: Int = 0,
     val user: String,
     val cuplikan: String,
     val pinned: Boolean,

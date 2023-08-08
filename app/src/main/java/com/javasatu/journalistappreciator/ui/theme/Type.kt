@@ -38,3 +38,9 @@ val Typography = Typography(
 )
 
 val fontKu = FontFamily(Font(R.font.segoeuihistoric))
+
+// val judulPostingan = TextStyle(
+//    fontFamily = FontFamily.Default,
+//    fontWeight = FontWeight.Bold,
+//    fontSize = 18.sp
+//)

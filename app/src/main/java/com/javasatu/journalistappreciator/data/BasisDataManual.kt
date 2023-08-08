@@ -11,21 +11,21 @@ import com.javasatu.journalistappreciator.model.TemplateFieldWhatsappUserProfile
 object BasisDataManual {
 
     val dataWhatsappChat = listOf(
-        FormDataPesan(id = 1,fotoProfil = R.drawable.fotoprofilabdussalam,user = "Abdus Salam",cuplikan = "Hello",pinned = true,bisukan = false,notif = 1),
-        FormDataPesan(id = 2,fotoProfil = R.drawable.fotoprofilrahmawati,user = "Rahmawati",cuplikan = "Hai",pinned = false,bisukan = false,notif = 0),
-        FormDataPesan(id = 3,fotoProfil = R.drawable.fotoprofilgunawansasmita,user = "Gunawan Sasmita",cuplikan = "Apa kabarmu",pinned = false,bisukan = false,notif = 42),
-        FormDataPesan(id = 4,fotoProfil = R.drawable.fotoprofilbudiharianto,user = "Budi Harianto",cuplikan = "Dah tidur",pinned = false,bisukan = false,notif = 6),
-        FormDataPesan(id = 5,fotoProfil = R.drawable.fotoprofilsusilowatiwahid,user = "Susilowati Wahid",cuplikan = "Jon...",pinned = false,bisukan = false,notif = 3),
-        FormDataPesan(id = 6,fotoProfil = R.drawable.fotoprofilnurrachman,user = "Nurrachman",cuplikan = "Assalamualaikum",pinned = false,bisukan = false,notif = 3),
-        FormDataPesan(id = 7,fotoProfil = R.drawable.fotoprofiljadadalwi,user = "Jadad Alwi",cuplikan = "KOen nandi",pinned = false,bisukan = false,notif = 7),
-        FormDataPesan(id = 8,fotoProfil = R.drawable.fotoprofiltheresiaarnold,user = "Theresia Arnold",cuplikan = "Onok kobongan i lho",pinned = false,bisukan = false,notif = 23),
-        FormDataPesan(id = 9,fotoProfil = R.drawable.fotoprofilsyamsaputra,user = "Syam Saputra",cuplikan = "Posisi?",pinned = false,bisukan = false,notif = 87),
-        FormDataPesan(id = 10,fotoProfil = R.drawable.fotoprofilsasasandiaga,user = "Sasa Sandiaga",cuplikan = "Udah makan?",pinned = false,bisukan = false,notif = 2),
-        FormDataPesan(id = 11,fotoProfil = R.drawable.fotoprofilrunojanwari,user = "Runo Janwari",cuplikan = "Yuk melok",pinned = false,bisukan = false,notif = 11),
-        FormDataPesan(id = 12,fotoProfil = R.drawable.fotoprofiljokopistiawan,user = "Joko Pistiawan",cuplikan = "Temenan?",pinned = false,bisukan = false,notif = 354),
-        FormDataPesan(id = 13,fotoProfil = R.drawable.fotoprofilramonsierra,user = "Ramon Sierra",cuplikan = "Dah bikin PR",pinned = false,bisukan = false,notif = 8),
-        FormDataPesan(id = 14,fotoProfil = R.drawable.fotoprofilgugunbanjar,user = "Gugun Banjar",cuplikan = "Kuesel aku",pinned = false,bisukan = false,notif = 43),
-        FormDataPesan(id = 15,fotoProfil = R.drawable.fotoprofillukitowahyu,user = "Lukito Wahyu",cuplikan = "Remek...",pinned = false,bisukan = false,notif = 1)
+        FormDataPesan(id = 1,fotoProfilChatPesan = R.drawable.fotoprofilabdussalam,user = "Abdus Salam",cuplikan = "Hello",pinned = true,bisukan = false,notif = 1),
+        FormDataPesan(id = 2,fotoProfilChatPesan = R.drawable.fotoprofilrahmawati,user = "Rahmawati",cuplikan = "Hai",pinned = false,bisukan = false,notif = 0),
+        FormDataPesan(id = 3,fotoProfilChatPesan = R.drawable.fotoprofilgunawansasmita,user = "Gunawan Sasmita",cuplikan = "Apa kabarmu",pinned = false,bisukan = false,notif = 42),
+        FormDataPesan(id = 4,fotoProfilChatPesan = R.drawable.fotoprofilbudiharianto,user = "Budi Harianto",cuplikan = "Dah tidur",pinned = false,bisukan = false,notif = 6),
+        FormDataPesan(id = 5,fotoProfilChatPesan = R.drawable.fotoprofilsusilowatiwahid,user = "Susilowati Wahid",cuplikan = "Jon...",pinned = false,bisukan = false,notif = 3),
+        FormDataPesan(id = 6,fotoProfilChatPesan = R.drawable.fotoprofilnurrachman,user = "Nurrachman",cuplikan = "Assalamualaikum",pinned = false,bisukan = false,notif = 3),
+        FormDataPesan(id = 7,fotoProfilChatPesan = R.drawable.fotoprofiljadadalwi,user = "Jadad Alwi",cuplikan = "KOen nandi",pinned = false,bisukan = false,notif = 7),
+        FormDataPesan(id = 8,fotoProfilChatPesan = R.drawable.fotoprofiltheresiaarnold,user = "Theresia Arnold",cuplikan = "Onok kobongan i lho",pinned = false,bisukan = false,notif = 23),
+        FormDataPesan(id = 9,fotoProfilChatPesan = R.drawable.fotoprofilsyamsaputra,user = "Syam Saputra",cuplikan = "Posisi?",pinned = false,bisukan = false,notif = 87),
+        FormDataPesan(id = 10,fotoProfilChatPesan = R.drawable.fotoprofilsasasandiaga,user = "Sasa Sandiaga",cuplikan = "Udah makan?",pinned = false,bisukan = false,notif = 2),
+        FormDataPesan(id = 11,fotoProfilChatPesan = R.drawable.fotoprofilrunojanwari,user = "Runo Janwari",cuplikan = "Yuk melok",pinned = false,bisukan = false,notif = 11),
+        FormDataPesan(id = 12,fotoProfilChatPesan = R.drawable.fotoprofiljokopistiawan,user = "Joko Pistiawan",cuplikan = "Temenan?",pinned = false,bisukan = false,notif = 354),
+        FormDataPesan(id = 13,fotoProfilChatPesan = R.drawable.fotoprofilramonsierra,user = "Ramon Sierra",cuplikan = "Dah bikin PR",pinned = false,bisukan = false,notif = 8),
+        FormDataPesan(id = 14,fotoProfilChatPesan = R.drawable.fotoprofilgugunbanjar,user = "Gugun Banjar",cuplikan = "Kuesel aku",pinned = false,bisukan = false,notif = 43),
+        FormDataPesan(id = 15,fotoProfilChatPesan = R.drawable.fotoprofillukitowahyu,user = "Lukito Wahyu",cuplikan = "Remek...",pinned = false,bisukan = false,notif = 1)
     )
 
     val listWhatsappUserProfile = listOf(

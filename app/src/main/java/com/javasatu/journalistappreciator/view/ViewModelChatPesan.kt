@@ -30,16 +30,11 @@ fun ViewModelChatPesan(formDataPesan: FormDataPesan){
     Row(
         modifier = Modifier
             .padding(horizontal = 12.dp, vertical = 8.dp)
-            .clickable {  },
+            .clickable { },
         verticalAlignment = Alignment.CenterVertically
     ){
-        Image(
-            painter = painterResource(id = formDataPesan.fotoProfil),
-            contentDescription = null,
-            modifier = Modifier
-                .size(48.dp)
-                .clip(CircleShape)
-        )
+        FotoProfilChatPesan(formDataPesan = formDataPesan)
+
         Column(
             modifier = Modifier
                 .padding(start = 8.dp)
@@ -115,4 +110,15 @@ fun ViewModelChatPesan(formDataPesan: FormDataPesan){
         }
     }
 
+}
+
+@Composable
+fun FotoProfilChatPesan(formDataPesan:FormDataPesan) {
+    Image(
+        painter = painterResource(id = formDataPesan.fotoProfilChatPesan),
+        contentDescription = null,
+        modifier = Modifier
+            .size(48.dp)
+            .clip(CircleShape)
+    )
 }
