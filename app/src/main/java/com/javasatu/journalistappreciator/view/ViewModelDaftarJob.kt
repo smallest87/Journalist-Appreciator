@@ -22,50 +22,47 @@ import com.javasatu.journalistappreciator.model.FormDataJob
 @Composable
 fun ViewModelDaftarJob(formDataJob: FormDataJob){
 
-        Card(
-            modifier = Modifier
-                .padding(top = 24.dp,start = 24.dp,end = 24.dp),
-            elevation = CardDefaults.cardElevation(10.dp),
-            border = BorderStroke(1.dp, Color.Gray)
-        ) {
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-            ) {
-                Column() {
-                    Row(){
-                        Text(
-                            modifier = Modifier
-                                .padding(10.dp),
-                            text = formDataJob.topikBerita,
-                            fontWeight = FontWeight.SemiBold
-                        )
-                    }
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(24.dp)
+    ) {
+        Column() {
+            Row(){
+                Text(
+                    modifier = Modifier
+                        .padding(10.dp),
+                    text = formDataJob.topikBerita,
+                    fontWeight = FontWeight.SemiBold,
+                    fontSize = 28.sp
+                )
+            }
 
-                    Divider(thickness = 1.dp, color = Color.Gray)
-                    Text(
+//            Divider(thickness = 1.dp, color = Color.Gray)
+            Text(
+                modifier = Modifier
+                    .padding(10.dp),
+                text = formDataJob.detailJob,
+                fontSize = 24.sp,
+                letterSpacing = 0.5.sp,
+                lineHeight = 28.sp,
+                color = Color.Gray
+            )
+            FlowRow(
+                modifier = Modifier
+                    .padding(12.dp)
+            ) {
+                formDataJob.jenisJob.forEach{
+                    Button(
+                        onClick = { /*TODO*/ },
                         modifier = Modifier
-                            .padding(10.dp),
-                        text = formDataJob.detailJob,
-                        fontSize = 15.sp,
-                        letterSpacing = 0.5.sp,
-                        lineHeight = 20.sp
-                    )
-                    FlowRow(
-                        modifier = Modifier
-                            .padding(12.dp)
+                            .padding(4.dp)
                     ) {
-                        formDataJob.jenisJob.forEach{
-                            Button(
-                                onClick = { /*TODO*/ },
-                                modifier = Modifier
-                                    .padding(4.dp)
-                            ) {
-                                Text(text = it)
-                            }
-                        }
+                        Text(text = it)
                     }
                 }
             }
+            Divider(thickness = 1.dp, color = Color.Gray)
         }
     }
+}
