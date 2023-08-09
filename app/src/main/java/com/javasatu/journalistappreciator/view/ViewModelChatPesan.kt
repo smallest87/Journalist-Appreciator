@@ -47,7 +47,6 @@ fun ViewModelChatPesan(formDataPesan: FormDataPesan){
                 Text(
                     text = formDataPesan.user,
                     fontWeight = FontWeight.SemiBold,
-                    color = Color.White,
                     letterSpacing = 0.5.sp
                 )
                 Text(
@@ -75,7 +74,6 @@ fun ViewModelChatPesan(formDataPesan: FormDataPesan){
 
                         Image(
                             painter = painterResource(id = R.drawable.pinned),
-                            colorFilter = ColorFilter.tint(color = Color(android.graphics.Color.parseColor("#878b8f"))),
                             contentDescription = null,
                             modifier = Modifier
                                 .size(28.dp)
@@ -97,6 +95,7 @@ fun ViewModelChatPesan(formDataPesan: FormDataPesan){
                                 text=formDataPesan.notif.toString(),
                                 fontSize = 12.sp,
                                 fontWeight = FontWeight.SemiBold,
+                                color = Color.White,
                                 modifier = Modifier
                                     .padding(horizontal = 8.dp, vertical = 4.dp)
                             )

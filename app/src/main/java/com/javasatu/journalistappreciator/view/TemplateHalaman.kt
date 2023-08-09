@@ -132,10 +132,7 @@ fun TabPesan() {
 
         // Kanvas ListView
 
-        Column(
-            modifier = Modifier
-                .background(Color(android.graphics.Color.parseColor("#1c0001")))
-        ){
+        Column(){
 
             val itemProfil = remember { BasisDataManual.dataWhatsappChat}
 
@@ -207,9 +204,7 @@ fun Branding(namaMerek: String, ukuranFont: Int) {
 @Composable
 fun BarisArsip() {
     // Kolom Arsip
-    Column(
-        modifier = Modifier
-            .background(Color(android.graphics.Color.parseColor("#480003")))){
+    Column(){
         Row(
             modifier = Modifier
                 .fillMaxWidth()
@@ -221,7 +216,6 @@ fun BarisArsip() {
         ){
             Image(
                 painter = painterResource(id = R.drawable.like),
-                colorFilter = ColorFilter.tint(color = Color.White),
                 contentDescription = null,
                 modifier = Modifier
                     .size(36.dp)
@@ -230,8 +224,7 @@ fun BarisArsip() {
             Text(
                 text = "Diarsipkan",
                 fontSize = 18.sp,
-                fontWeight = FontWeight.SemiBold,
-                color = Color.White
+                fontWeight = FontWeight.SemiBold
             )
         }
     }
