@@ -8,35 +8,22 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.shape.CornerSize
-import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.Divider
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
-import com.javasatu.journalistappreciator.R
 import com.javasatu.journalistappreciator.model.FormDataFacebook
-import com.javasatu.journalistappreciator.ui.theme.fontKu
-import com.javasatu.journalistappreciator.ui.theme.replyTypography
+import com.javasatu.journalistappreciator.ui.theme.kustomTypography
 
 @Composable
 fun ViewModelPostBeranda(formDataFacebook: FormDataFacebook){
-    Card (
-        modifier = Modifier
-            .padding(horizontal = 0.dp, vertical = 8.dp)
-            .fillMaxWidth(),
-        elevation = CardDefaults.cardElevation(4.dp),
-        shape = RoundedCornerShape(corner = CornerSize(0.dp))
-    ){
         Column(
             modifier = Modifier
                 .fillMaxWidth()
@@ -56,11 +43,11 @@ fun ViewModelPostBeranda(formDataFacebook: FormDataFacebook){
                         text = formDataFacebook.namaProfilString,
                         Modifier
                             .fillMaxWidth(),
-                        style = replyTypography.titleMedium
+                        style = kustomTypography.titleMedium
                     )
                     Text(
                         text = formDataFacebook.waktuPostingan,
-                        style = replyTypography.titleSmall
+                        style = kustomTypography.titleSmall
                     )
                 }
             }
@@ -68,7 +55,7 @@ fun ViewModelPostBeranda(formDataFacebook: FormDataFacebook){
                 modifier = Modifier
                     .padding(8.dp),
                 text = formDataFacebook.postinganString,
-                style = replyTypography.bodyLarge
+                style = kustomTypography.bodyLarge
             )
 
             FotoPosting(formDataFacebook = formDataFacebook)
@@ -78,27 +65,21 @@ fun ViewModelPostBeranda(formDataFacebook: FormDataFacebook){
                     .fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceAround
             ){
-                Image(
-                    painter = painterResource(id = R.drawable.postbottomiconthumb),
-                    contentDescription = null,
-                    modifier = Modifier
-                        .size(24.dp)
+                Text(
+                    text = "Suka"
                 )
-                Image(
-                    painter = painterResource(id = R.drawable.postbottomiconcomment),
-                    contentDescription = null,
-                    modifier = Modifier
-                        .size(24.dp)
+                Text(
+                    text = "Komentar"
                 )
-                Image(
-                    painter = painterResource(id = R.drawable.postbottomiconshare),
-                    contentDescription = null,
-                    modifier = Modifier
-                        .size(24.dp)
+                Text(
+                    text = "Bagikan"
                 )
             }
+            Divider(
+                thickness = Dp.Hairline,
+                color = MaterialTheme.colorScheme.secondary
+            )
         }
-    }
 
 }
 

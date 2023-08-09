@@ -45,7 +45,7 @@ val fontKu = FontFamily(Font(R.font.segoeuihistoric))
 //    fontSize = 18.sp
 //)
 
-val replyTypography = Typography(
+val kustomTypography = Typography(
     headlineLarge = TextStyle(
         fontWeight = FontWeight.SemiBold,
         fontSize = 32.sp,

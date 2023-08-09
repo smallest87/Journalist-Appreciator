@@ -16,45 +16,45 @@ import androidx.compose.ui.platform.LocalView
 import androidx.core.view.WindowCompat
 
 // Material 3 color schemes
-private val replyDarkColorScheme = darkColorScheme(
-    primary = replyDarkPrimary,
-    onPrimary = replyDarkOnPrimary,
-    primaryContainer = replyDarkPrimaryContainer,
-    onPrimaryContainer = replyDarkOnPrimaryContainer,
-    inversePrimary = replyDarkPrimaryInverse,
-    secondary = replyDarkSecondary,
-    onSecondary = replyDarkOnSecondary,
-    secondaryContainer = replyDarkSecondaryContainer,
-    onSecondaryContainer = replyDarkOnSecondaryContainer,
-    tertiary = replyDarkTertiary,
-    onTertiary = replyDarkOnTertiary,
-    tertiaryContainer = replyDarkTertiaryContainer,
-    onTertiaryContainer = replyDarkOnTertiaryContainer,
-    error = replyDarkError,
-    onError = replyDarkOnError,
-    errorContainer = replyDarkErrorContainer,
-    onErrorContainer = replyDarkOnErrorContainer,
-    background = replyDarkBackground,
-    onBackground = replyDarkOnBackground,
-    surface = replyDarkSurface,
-    onSurface = replyDarkOnSurface,
-    inverseSurface = replyDarkInverseSurface,
-    inverseOnSurface = replyDarkInverseOnSurface,
-    surfaceVariant = replyDarkSurfaceVariant,
-    onSurfaceVariant = replyDarkOnSurfaceVariant,
-    outline = replyDarkOutline
+private val skemaWarnaJAGelap = darkColorScheme(
+    primary = jaDarkPrimary,
+    onPrimary = jaDarkOnPrimary,
+    primaryContainer = jaDarkPrimaryContainer,
+    onPrimaryContainer = jaDarkOnPrimaryContainer,
+    inversePrimary = jaGelapPrimaryInverse,
+    secondary = jaDarkSecondary,
+    onSecondary = jaDarkOnSecondary,
+    secondaryContainer = jaDarkSecondaryContainer,
+    onSecondaryContainer = jaDarkOnSecondaryContainer,
+    tertiary = jaDarkTertiary,
+    onTertiary = jaGelapOnTertiary,
+    tertiaryContainer = jaGelapTertiaryContainer,
+    onTertiaryContainer = jaGelapOnTertiaryContainer,
+    error = jaGelapError,
+    onError = jaGelapOnError,
+    errorContainer = jaGelapErrorContainer,
+    onErrorContainer = jaGelapOnErrorContainer,
+    background = jaGelapDarkBackground,
+    onBackground = jaGelapDarkOnBackground,
+    surface = jaGelapSurface,
+    onSurface = jaGelapOnSurface,
+    inverseSurface = jaGelapInverseSurface,
+    inverseOnSurface = jaGelapInverseOnSurface,
+    surfaceVariant = jaGelapSurfaceVariant,
+    onSurfaceVariant = jaGelapOnSurfaceVariant,
+    outline = jaGelapOutline
 )
 
-private val replyLightColorScheme = lightColorScheme(
-    primary = replyLightPrimary,
-    onPrimary = replyLightOnPrimary,
-    primaryContainer = replyLightPrimaryContainer,
-    onPrimaryContainer = replyLightOnPrimaryContainer,
+private val skemaWarnaJATerang = lightColorScheme(
+    primary = jaLightPrimary,
+    onPrimary = jaLightOnPrimary,
+    primaryContainer = jaLightPrimaryContainer,
+    onPrimaryContainer = jaLightOnPrimaryContainer,
     inversePrimary = replyLightPrimaryInverse,
-    secondary = replyLightSecondary,
-    onSecondary = replyLightOnSecondary,
-    secondaryContainer = replyLightSecondaryContainer,
-    onSecondaryContainer = replyLightOnSecondaryContainer,
+    secondary = jaLightSecondary,
+    onSecondary = jaLightOnSecondary,
+    secondaryContainer = jaLightSecondaryContainer,
+    onSecondaryContainer = jaLightOnSecondaryContainer,
     tertiary = replyLightTertiary,
     onTertiary = replyLightOnTertiary,
     tertiaryContainer = replyLightTertiaryContainer,
@@ -81,27 +81,27 @@ fun LazyColumnTheme(
     dynamicColor: Boolean = true,
     content: @Composable () -> Unit
 ) {
-    val colorScheme = when {
+    val skemaWarnaJA = when {
         dynamicColor && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S -> {
             val context = LocalContext.current
             if (darkTheme) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
         }
 
-        darkTheme -> replyDarkColorScheme
-        else -> replyLightColorScheme
+        darkTheme -> skemaWarnaJAGelap
+        else -> skemaWarnaJATerang
     }
     val view = LocalView.current
     if (!view.isInEditMode) {
         SideEffect {
             val window = (view.context as Activity).window
-            window.statusBarColor = colorScheme.primary.toArgb()
+            window.statusBarColor = skemaWarnaJA.primary.toArgb()
             WindowCompat.getInsetsController(window, view).isAppearanceLightStatusBars = darkTheme
         }
     }
 
     MaterialTheme(
-        colorScheme = colorScheme,
-        typography = replyTypography,
+        colorScheme = skemaWarnaJA,
+        typography = kustomTypography,
         shapes = shapes,
         content = content
     )
