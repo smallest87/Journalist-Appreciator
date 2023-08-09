@@ -27,87 +27,92 @@ import com.javasatu.journalistappreciator.model.FormDataPesan
 @Composable
 fun ViewModelChatPesan(formDataPesan: FormDataPesan){
 
-    Row(
+    Box(
         modifier = Modifier
-            .padding(horizontal = 12.dp, vertical = 8.dp)
-            .clickable { },
-        verticalAlignment = Alignment.CenterVertically
+            .clickable { }
     ){
-        FotoProfilChatPesan(formDataPesan = formDataPesan)
-
-        Column(
+        Row(
             modifier = Modifier
-                .padding(start = 8.dp)
+                .padding(horizontal = 12.dp, vertical = 8.dp),
+            verticalAlignment = Alignment.CenterVertically
         ){
-            Row(
+            FotoProfilChatPesan(formDataPesan = formDataPesan)
+
+            Column(
                 modifier = Modifier
-                    .fillMaxWidth(),
-                horizontalArrangement = Arrangement.SpaceBetween
+                    .padding(start = 8.dp)
             ){
-                Text(
-                    text = formDataPesan.user,
-                    fontWeight = FontWeight.SemiBold,
-                    letterSpacing = 0.5.sp
-                )
-                Text(
-                    text = "05/08/2023",
-                    fontSize = 12.sp,
-                    letterSpacing = 0.2.sp,
-                    color = Color(android.graphics.Color.parseColor("#878b8f"))
-                )
-            }
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth(),
-                horizontalArrangement = Arrangement.SpaceBetween
-            ){
-                Text(
-                    text = formDataPesan.cuplikan,
-                    letterSpacing = 0.2.sp,
-                    color = Color(android.graphics.Color.parseColor("#878b8f"))
-                )
                 Row(
-                    verticalAlignment = Alignment.CenterVertically
+                    modifier = Modifier
+                        .fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceBetween
                 ){
+                    Text(
+                        text = formDataPesan.user,
+                        fontWeight = FontWeight.SemiBold,
+                        letterSpacing = 0.5.sp
+                    )
+                    Text(
+                        text = "05/08/2023",
+                        fontSize = 12.sp,
+                        letterSpacing = 0.2.sp,
+                        color = Color(android.graphics.Color.parseColor("#878b8f"))
+                    )
+                }
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceBetween
+                ){
+                    Text(
+                        text = formDataPesan.cuplikan,
+                        letterSpacing = 0.2.sp,
+                        color = Color(android.graphics.Color.parseColor("#878b8f"))
+                    )
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically
+                    ){
 
-                    if(formDataPesan.pinned == true){
+                        if(formDataPesan.pinned == true){
 
-                        Image(
-                            painter = painterResource(id = R.drawable.pinned),
-                            contentDescription = null,
-                            modifier = Modifier
-                                .size(28.dp)
-                                .padding(end = 8.dp)
-                        )
-
-                    }
-
-                    if (formDataPesan.notif > 0){
-
-                        Box(
-                            modifier = Modifier
-//                            .size(24.dp)
-                                .clip(RoundedCornerShape(25.dp))
-                                .background(Color(android.graphics.Color.parseColor("#bc6669"))),
-                            contentAlignment = Alignment.Center
-                        ){
-                            Text(
-                                text=formDataPesan.notif.toString(),
-                                fontSize = 12.sp,
-                                fontWeight = FontWeight.SemiBold,
-                                color = Color.White,
+                            Image(
+                                painter = painterResource(id = R.drawable.pinned),
+                                contentDescription = null,
                                 modifier = Modifier
-                                    .padding(horizontal = 8.dp, vertical = 4.dp)
+                                    .size(28.dp)
+                                    .padding(end = 8.dp)
                             )
+
                         }
 
+                        if (formDataPesan.notif > 0){
+
+                            Box(
+                                modifier = Modifier
+//                            .size(24.dp)
+                                    .clip(RoundedCornerShape(25.dp))
+                                    .background(Color(android.graphics.Color.parseColor("#bc6669"))),
+                                contentAlignment = Alignment.Center
+                            ){
+                                Text(
+                                    text=formDataPesan.notif.toString(),
+                                    fontSize = 12.sp,
+                                    fontWeight = FontWeight.SemiBold,
+                                    color = Color.White,
+                                    modifier = Modifier
+                                        .padding(horizontal = 8.dp, vertical = 4.dp)
+                                )
+                            }
+
+                        }
+
+
                     }
-
-
                 }
             }
         }
     }
+
 
 }
 

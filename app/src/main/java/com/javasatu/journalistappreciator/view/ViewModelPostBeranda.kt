@@ -26,6 +26,7 @@ import androidx.compose.ui.unit.sp
 import com.javasatu.journalistappreciator.R
 import com.javasatu.journalistappreciator.model.FormDataFacebook
 import com.javasatu.journalistappreciator.ui.theme.fontKu
+import com.javasatu.journalistappreciator.ui.theme.replyTypography
 
 @Composable
 fun ViewModelPostBeranda(formDataFacebook: FormDataFacebook){
@@ -34,7 +35,6 @@ fun ViewModelPostBeranda(formDataFacebook: FormDataFacebook){
             .padding(horizontal = 0.dp, vertical = 8.dp)
             .fillMaxWidth(),
         elevation = CardDefaults.cardElevation(4.dp),
-        colors = CardDefaults.cardColors(Color.White),
         shape = RoundedCornerShape(corner = CornerSize(0.dp))
     ){
         Column(
@@ -56,13 +56,11 @@ fun ViewModelPostBeranda(formDataFacebook: FormDataFacebook){
                         text = formDataFacebook.namaProfilString,
                         Modifier
                             .fillMaxWidth(),
-                        fontSize = 16.sp,
-                        fontWeight = FontWeight.Bold
+                        style = replyTypography.titleMedium
                     )
                     Text(
                         text = formDataFacebook.waktuPostingan,
-                        fontSize = 12.sp,
-                        color = Color.Gray
+                        style = replyTypography.titleSmall
                     )
                 }
             }
@@ -70,9 +68,7 @@ fun ViewModelPostBeranda(formDataFacebook: FormDataFacebook){
                 modifier = Modifier
                     .padding(8.dp),
                 text = formDataFacebook.postinganString,
-                fontSize = 16.sp,
-                fontFamily = fontKu,
-                letterSpacing = 0.2.sp
+                style = replyTypography.bodyLarge
             )
 
             FotoPosting(formDataFacebook = formDataFacebook)

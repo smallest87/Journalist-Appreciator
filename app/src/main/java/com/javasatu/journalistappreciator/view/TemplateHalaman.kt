@@ -30,6 +30,7 @@ import androidx.compose.material3.Tab
 import androidx.compose.material3.TabRow
 import com.javasatu.journalistappreciator.R
 import com.javasatu.journalistappreciator.data.BasisDataManual
+import com.javasatu.journalistappreciator.ui.theme.replyTypography
 
 @Composable
 fun TampilanAwal(){
@@ -39,7 +40,6 @@ fun TampilanAwal(){
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .background(Color(android.graphics.Color.parseColor("#480003")))
         ){
             Branding("Journalist Appreciator™",16)
         }
@@ -109,8 +109,6 @@ fun TabBeranda() {
 
     Column(){
 
-//        HeaderPage()
-
         LazyColumn(){
             items(
                 items = itemFacebook,
@@ -174,8 +172,6 @@ fun TabNotif() {
 
     Column(){
 
-//        HeaderPage()
-
         LazyColumn(){
             items(
                 items = itemNotif,
@@ -192,9 +188,7 @@ fun TabNotif() {
 fun Branding(namaMerek: String, ukuranFont: Int) {
     Text(
         text = namaMerek,
-        fontSize = ukuranFont.sp,
-        fontWeight = FontWeight.Bold,
-        color = Color.White,
+        style = replyTypography.titleMedium,
 
         modifier = Modifier
             .padding(8.dp)

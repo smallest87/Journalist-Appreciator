@@ -22,6 +22,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.javasatu.journalistappreciator.model.FormDataJob
+import com.javasatu.journalistappreciator.ui.theme.replyTypography
 
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
@@ -40,9 +41,7 @@ fun ViewModelDaftarJobFlat(formDataJob: FormDataJob){
                 modifier = Modifier
                     .padding(10.dp),
                 text = formDataJob.topikBerita,
-                fontWeight = FontWeight.SemiBold,
-                fontSize = 30.sp,
-                lineHeight = 32.sp
+                style = replyTypography.titleLarge
             )
 
 
@@ -53,9 +52,7 @@ fun ViewModelDaftarJobFlat(formDataJob: FormDataJob){
                 modifier = Modifier
                     .padding(10.dp),
                 text = formDataJob.detailJob,
-                fontSize = 18.sp,
-                letterSpacing = 0.5.sp,
-                lineHeight = 20.sp
+                style = replyTypography.bodyLarge
             )
 
             FlowRow(
