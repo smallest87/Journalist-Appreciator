@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace = "com.javasatu.journalistappreciator"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.javasatu.journalistappreciator"
         minSdk = 24
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
@@ -57,13 +57,16 @@ dependencies {
     implementation(platform("androidx.compose:compose-bom:2023.03.00"))
 
     // Compose UI
-    implementation("androidx.compose.ui:ui:1.4.3")
-    implementation("androidx.compose.ui:ui-graphics:1.4.3")
-    implementation("androidx.compose.ui:ui-tooling-preview:1.4.3")
+    val ui_version = "1.5.0"
+
+    implementation("androidx.compose.ui:ui:$ui_version")
+    implementation("androidx.compose.ui:ui-graphics:$ui_version")
+    implementation("androidx.compose.ui:ui-tooling-preview:$ui_version")
 
     // Material 3
-    implementation("androidx.compose.material3:material3:1.1.1")
-    implementation("androidx.compose.material3:material3-window-size-class:1.1.1")
+    val material3_version = "1.1.1"
+    implementation("androidx.compose.material3:material3:$material3_version")
+    implementation("androidx.compose.material3:material3-window-size-class:$material3_version")
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
@@ -74,12 +77,21 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-test-manifest")
 
     // Coroutines
-    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
-    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+    val coroutine_version = "1.7.3"
+
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutine_version")
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutine_version")
 
     // Room
     val room_version = "2.5.2"
 
     implementation("androidx.room:room-runtime:$room_version")
     annotationProcessor("androidx.room:room-compiler:$room_version")
+
+    // Emoji2
+    val emoji2_version = "1.4.0"
+
+    implementation("androidx.emoji2:emoji2:$emoji2_version")
+    implementation("androidx.emoji2:emoji2-views:$emoji2_version")
+    implementation("androidx.emoji2:emoji2-views-helper:$emoji2_version")
 }
