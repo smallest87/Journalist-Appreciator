@@ -9,13 +9,19 @@ import kotlinx.coroutines.flow.Flow
 @Dao
 interface Dao {
 
-    @Query("SELECT * FROM user_table ORDER BY firstName ASC")
+    @Query(
+        "SELECT * FROM user_table ORDER BY firstName ASC"
+    )
     fun getAlphabetizedWords(): Flow<List<User>>
 
-    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    @Insert(
+        onConflict = OnConflictStrategy.IGNORE
+    )
     suspend fun insert(user: User)
 
-    @Query("DELETE FROM user_table")
+    @Query(
+        "DELETE FROM user_table"
+    )
     suspend fun deleteAll()
 
 }
