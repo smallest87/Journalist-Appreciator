@@ -12,7 +12,7 @@ import kotlinx.coroutines.launch
 @Database(entities = [User::class], version = 1)
 abstract class UserDatabase : RoomDatabase() {
 
-    abstract fun userDao(): UserDao
+    abstract fun userDao(): Dao
 
     companion object {
         @Volatile
@@ -63,7 +63,7 @@ abstract class UserDatabase : RoomDatabase() {
          * Populate the database in a new coroutine.
          * If you want to start with more words, just add them.
          */
-        suspend fun populateDatabase(userDao: UserDao) {
+        suspend fun populateDatabase(userDao: Dao) {
             // Start the app with a clean database every time.
             // Not needed if you only populate on creation.
             userDao.deleteAll()
