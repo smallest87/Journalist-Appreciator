@@ -16,11 +16,35 @@ import com.javasatu.journalistappreciator.view.TampilanAwal
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
+        /*
+        ** 'super' merupakan 'superclass'
+        * Sedangkan metode 'onCreate' menunjukkan penyiapan dasar untuk aktivitas,
+        * seperti mendeklarasikan antarmuka pengguna
+        * (didefinisikan dalam file tata letak XML),
+        * mendefinisikan variabel anggota,
+        * dan mengonfigurasi beberapa UI.
+        */
+
         setContent {
+            /*
+            * 'setContent' mendefinisikan aktivitas layout
+            * dimana fungsi 'composable' dipanggil.
+            * 'Fungsi Composable' hanya dapat dipanggil
+            * dari 'fungsi composable' lainnya.
+            * */
+
             LazyColumnTheme {
-                // A surface container using the 'background' color from the theme
+                /* 'LazyColumnTheme' menjadi bagian dari Theme.kt.
+                * yang mengatur penerapan tema menyeluruh.
+                */
+
                 Surface(
+                    /*Menangani buffer mentah
+                    yang nantinya dikelola penyusun layar.
+                     */
+
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
