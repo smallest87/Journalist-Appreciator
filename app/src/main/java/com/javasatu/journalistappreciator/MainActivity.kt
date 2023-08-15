@@ -53,15 +53,14 @@ class MainActivity : ComponentActivity() {
             }
         }
     }
-}
-
-@SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
-@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-fun PraTampilanAwal() {
-    Scaffold(
-        content = {
-            TampilanAwal()
-        }
-    )
+    @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
+    @OptIn(ExperimentalMaterial3Api::class)
+    @Composable
+    private fun PraTampilanAwal() {
+        Scaffold(
+            content = {
+                TampilanAwal()
+            }
+        )
+    }
 }
