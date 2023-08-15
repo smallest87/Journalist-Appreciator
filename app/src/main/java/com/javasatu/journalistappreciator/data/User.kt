@@ -2,8 +2,9 @@ package com.javasatu.journalistappreciator.data
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import com.javasatu.journalistappreciator.contants.TABLE_NAME
 
-@Entity(tableName = "user_table")
+@Entity(tableName = TABLE_NAME)
 class User (
     @PrimaryKey(autoGenerate = true)
     val id:Int,

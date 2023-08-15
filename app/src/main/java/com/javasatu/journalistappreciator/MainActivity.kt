@@ -13,6 +13,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.lifecycle.lifecycleScope
 import androidx.room.Room
+import com.javasatu.journalistappreciator.contants.DATABASE_NAME
 import com.javasatu.journalistappreciator.data.User
 import com.javasatu.journalistappreciator.data.UserDao
 import com.javasatu.journalistappreciator.data.UserDatabase
@@ -65,7 +66,7 @@ class MainActivity : ComponentActivity() {
         val roomDatabaseBahan = Room.databaseBuilder(
             context = applicationContext,
             klass = UserDatabase::class.java,
-            name = "book_database"
+            name = DATABASE_NAME
         )
 
         val roomDatabaseMatang = roomDatabaseBahan.build()
