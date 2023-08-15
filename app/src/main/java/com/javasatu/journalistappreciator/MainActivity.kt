@@ -23,7 +23,7 @@ import kotlinx.coroutines.launch
 
 class MainActivity : ComponentActivity() {
 
-    private lateinit var fungsiBookSiapPakai: UserDao
+    private lateinit var fungsiUserSiapPakai: UserDao
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
@@ -70,7 +70,7 @@ class MainActivity : ComponentActivity() {
 
         val roomDatabaseMatang = roomDatabaseBahan.build()
 
-        fungsiBookSiapPakai = roomDatabaseMatang.beriFungsiBookDao()
+        fungsiUserSiapPakai = roomDatabaseMatang.beriFungsiBookDao()
 
         terapkanRoomDB()
 
@@ -80,10 +80,10 @@ class MainActivity : ComponentActivity() {
     private fun terapkanRoomDB() {
 
         lifecycleScope.launch(Dispatchers.IO) {
-            fungsiBookSiapPakai.insertBook(User(1,"Julian","Sukrisna",37))
-            fungsiBookSiapPakai.insertBook(User(2,"Joko","Winahyu",54))
-            fungsiBookSiapPakai.insertBook(User(3,"Awank","Wibianto",42))
-            fungsiBookSiapPakai.insertBook(User(4,"Ali","Baba",34))
+            fungsiUserSiapPakai.insertBook(User(1,"Julian","Sukrisna",37))
+            fungsiUserSiapPakai.insertBook(User(2,"Joko","Winahyu",54))
+            fungsiUserSiapPakai.insertBook(User(3,"Awank","Wibianto",42))
+            fungsiUserSiapPakai.insertBook(User(4,"Ali","Baba",34))
         }
     }
 
