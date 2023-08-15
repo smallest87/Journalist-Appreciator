@@ -11,10 +11,19 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.lifecycle.lifecycleScope
+import androidx.room.Room
+import com.javasatu.journalistappreciator.data.User
+import com.javasatu.journalistappreciator.data.UserDao
+import com.javasatu.journalistappreciator.data.UserDatabase
 import com.javasatu.journalistappreciator.ui.theme.LazyColumnTheme
 import com.javasatu.journalistappreciator.view.TampilanAwal
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 class MainActivity : ComponentActivity() {
+
+    private lateinit var fungsiBookSiapPakai: UserDao
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
@@ -52,7 +61,33 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
+
+        val roomDatabaseBahan = Room.databaseBuilder(
+            context = applicationContext,
+            klass = UserDatabase::class.java,
+            name = "book_database"
+        )
+
+        val roomDatabaseMatang = roomDatabaseBahan.build()
+
+        fungsiBookSiapPakai = roomDatabaseMatang.beriFungsiBookDao()
+
+        terapkanRoomDB()
+
     }
+
+
+    private fun terapkanRoomDB() {
+
+        lifecycleScope.launch(Dispatchers.IO) {
+            fungsiBookSiapPakai.insertBook(User(1,"Julian","Sukrisna",37))
+            fungsiBookSiapPakai.insertBook(User(2,"Joko","Winahyu",54))
+            fungsiBookSiapPakai.insertBook(User(3,"Awank","Wibianto",42))
+            fungsiBookSiapPakai.insertBook(User(4,"Ali","Baba",34))
+        }
+    }
+
+
     @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
     @OptIn(ExperimentalMaterial3Api::class)
     @Composable
