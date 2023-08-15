@@ -80,10 +80,10 @@ class MainActivity : ComponentActivity() {
     private fun terapkanRoomDB() {
 
         lifecycleScope.launch(Dispatchers.IO) {
-            fungsiUserSiapPakai.insertBook(User(1,"Julian","Sukrisna",37))
-            fungsiUserSiapPakai.insertBook(User(2,"Joko","Winahyu",54))
-            fungsiUserSiapPakai.insertBook(User(3,"Awank","Wibianto",42))
-            fungsiUserSiapPakai.insertBook(User(4,"Ali","Baba",34))
+            fungsiUserSiapPakai.tambahUser(User(1,"Julian","Sukrisna",37))
+            fungsiUserSiapPakai.tambahUser(User(2,"Joko","Winahyu",54))
+            fungsiUserSiapPakai.tambahUser(User(3,"Awank","Wibianto",42))
+            fungsiUserSiapPakai.tambahUser(User(4,"Ali","Baba",34))
         }
     }
 
