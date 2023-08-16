@@ -107,7 +107,6 @@ class MainActivity : ComponentActivity() {
             * Scaffold= Sebuah Composable dalam menyediakan slot
             * untuk berbagai komponen dan elemen layar lainnya
             * */
-            topBar = {HeaderAplikasi()},
             content = {TampilanAwal()}
         )
     }
