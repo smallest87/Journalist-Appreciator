@@ -94,6 +94,10 @@ class MainActivity : ComponentActivity() {
     @Composable
     private fun PraTampilanAwal() {
         Scaffold(
+            /*
+            * Scaffold= Sebuah Composable dalam menyediakan slot
+            * untuk berbagai komponen dan elemen layar lainnya
+            * */
             content = {
                 TampilanAwal()
             }
