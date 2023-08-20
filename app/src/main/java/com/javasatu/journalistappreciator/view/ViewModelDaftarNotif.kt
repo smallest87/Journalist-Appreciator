@@ -22,10 +22,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.javasatu.journalistappreciator.model.FormDataNotif
+import com.javasatu.journalistappreciator.model.DataNotif
 
 @Composable
-fun ViewModelDaftarNotif(formDataNotif: FormDataNotif){
+fun ViewModelDaftarNotif(dataNotif: DataNotif){
     Row (
         modifier = Modifier
             .fillMaxWidth()
@@ -35,25 +35,25 @@ fun ViewModelDaftarNotif(formDataNotif: FormDataNotif){
         Row(
             verticalAlignment = Alignment.CenterVertically,
         ){
-            FotoNotif(formDataNotif = formDataNotif)
+            FotoNotif(dataNotif = dataNotif)
             Text(
 
                 modifier = Modifier
                     .padding(start = 4.dp),
                 text = buildAnnotatedString {
                     withStyle(style = SpanStyle(fontWeight = FontWeight.Bold)) {
-                        append(formDataNotif.notifDari)
+                        append(dataNotif.notifDari)
                     }
 
                     append(" ")
-                    append(formDataNotif.aktivitas)
+                    append(dataNotif.aktivitas)
                     append(" ")
 
                     withStyle(
                         style = SpanStyle(
                             fontWeight = FontWeight.Bold
                         )){
-                        append(formDataNotif.namaObyekString)
+                        append(dataNotif.namaObyekString)
                     }
 
                     append(".")
@@ -63,7 +63,7 @@ fun ViewModelDaftarNotif(formDataNotif: FormDataNotif){
                             color = Color.Gray,
                             fontSize = 12.sp
                         )) {
-                        append(formDataNotif.waktuNotifString)
+                        append(dataNotif.waktuNotifString)
                     }
                 }
             )
@@ -75,9 +75,9 @@ fun ViewModelDaftarNotif(formDataNotif: FormDataNotif){
     Divider(thickness = 1.dp, color = Color.LightGray)
 }
 @Composable
-private fun FotoNotif(formDataNotif: FormDataNotif) {
+private fun FotoNotif(dataNotif: DataNotif) {
     Image(
-        painter = painterResource(id = formDataNotif.fotoNotifImage),
+        painter = painterResource(id = dataNotif.fotoNotifImage),
         contentDescription = null,
         contentScale = ContentScale.Crop,
         modifier = Modifier

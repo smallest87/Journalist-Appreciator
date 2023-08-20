@@ -16,11 +16,11 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.javasatu.journalistappreciator.model.FormDataJob
+import com.javasatu.journalistappreciator.model.DataJob
 
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
-fun ViewModelDaftarJob(formDataJob: FormDataJob){
+fun ViewModelDaftarJob(dataJob: DataJob){
 
         Card(
             modifier = Modifier
@@ -37,7 +37,7 @@ fun ViewModelDaftarJob(formDataJob: FormDataJob){
                         Text(
                             modifier = Modifier
                                 .padding(10.dp),
-                            text = formDataJob.topikBerita,
+                            text = dataJob.topikBerita,
                             fontWeight = FontWeight.SemiBold
                         )
                     }
@@ -46,7 +46,7 @@ fun ViewModelDaftarJob(formDataJob: FormDataJob){
                     Text(
                         modifier = Modifier
                             .padding(10.dp),
-                        text = formDataJob.detailJob,
+                        text = dataJob.detailJob,
                         fontSize = 15.sp,
                         letterSpacing = 0.5.sp,
                         lineHeight = 20.sp
@@ -55,7 +55,7 @@ fun ViewModelDaftarJob(formDataJob: FormDataJob){
                         modifier = Modifier
                             .padding(12.dp)
                     ) {
-                        formDataJob.jenisJob.forEach{
+                        dataJob.jenisJob.forEach{
                             Button(
                                 onClick = { /*TODO*/ },
                                 modifier = Modifier
